@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import HeroSvg from "../svg/HeroSvg.astro";
+import SavingsSvg from "../svg/SavingsSvg.astro";
 import IconWhatsapp from "../icons/IconWhatsapp.astro";
 import IconAuto from "../icons/IconAuto.astro";
 import IconHogar from "../icons/IconHogar.astro";
@@ -15,15 +16,17 @@ import IconPhone from "../icons/IconPhone.astro";
 import IconMail from "../icons/IconMail.astro";
 import IconFacebook from "../icons/IconFacebook.astro";
 import IconInstagram from "../icons/IconInstagram.astro";
+import IconPig from "../icons/IconPig.astro";
+import IconCheck from "../icons/IconCheck.astro";
 ---
 
-<Layout title="DF - Asesores de Seguros">
+<Layout title="DAFA - Asesores de Seguros">
   <header class="flex justify-center w-full h-full py-6 px-24">
     <div class="w-full max-w-[1440px] flex justify-between items-center">
       <figure>
         <a href="/">
           <h1 class="text-2xl font-semibold text-blue-800">
-            DF - Asesores de Seguros
+            DAFA - Asesores de Seguros
           </h1>
         </a>
       </figure>
@@ -57,22 +60,19 @@ import IconInstagram from "../icons/IconInstagram.astro";
             Elegí estar seguro
           </h2>
           <p class="text-[21px] w-[60ch] mb-6">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
-            incidunt exercitationem quae illum tenetur quam assumenda iure
-            doloribus molestias dicta.
+            Somos <span class="font-semibold text-blue-800"
+              >Productores Asesores de Seguros</span
+            > con mas de 25 años de experiencia en el rubro. Trabajamos con las mejores
+            compañias aseguradoras del mercado.
           </p>
           <a
             class="bg-blue-800 text-lg mr-1 font-medium tracking-wide rounded-md text-white px-10 py-[10px]"
             href="/">Contactanos</a
           >
-          <!-- <a
-            class="bg-blue-800 text-lg tracking-wide rounded-md text-white px-12 py-[9px]"
-            href="/">Button</a
-          > -->
         </header>
         <footer class="place-self-center">
-          <figure class="flex w-[540px] justify-center">
-            <HeroSvg class="w-[540px]" />
+          <figure class="flex w-full justify-center">
+            <HeroSvg class="w-[600px]" />
           </figure>
         </footer>
       </div>
@@ -83,12 +83,23 @@ import IconInstagram from "../icons/IconInstagram.astro";
         class="w-full max-w-[1440px] flex flex-col justify-evenly items-center"
       >
         <header class="w-full">
-          <h3 class="text-start font-medium text-4xl opacity-90 mb-3">
+          <h3 class="text-start font-medium text-4xl text-blue-900 mb-4">
             Conoce nuestro Seguros
           </h3>
-          <span
-            class="text-lg inline-block mb-12 py-1 px-5 tracking-wide rounded-full font-medium bg-blue-800 text-white"
-            >Personas</span
+          <a
+            href="/"
+            class="text-[17px] inline-block mr-1 mb-12 py-[5px] px-5 tracking-wide rounded-full font-medium shadow-[0_8px_30px_rgb(0,0,0,0.12)] bg-blue-800 text-white"
+            >Personas</a
+          >
+          <a
+            href="/"
+            class="text-[17px] inline-block mr-1 mb-12 py-[5px] px-5 tracking-wide rounded-full font-medium shadow-[0_8px_30px_rgb(0,0,0,0.12)] bg-white/60 text-blue-800"
+            >Empresas y Profesionales</a
+          >
+          <a
+            href="/"
+            class="text-[17px] inline-block mr-1 mb-12 py-[5px] px-5 tracking-wide rounded-full font-medium shadow-[0_8px_30px_rgb(0,0,0,0.12)] bg-white/60 text-blue-800"
+            >Transporte de Pasajeros</a
           >
         </header>
         <footer
@@ -121,7 +132,7 @@ import IconInstagram from "../icons/IconInstagram.astro";
         class="w-full max-w-[1440px] flex flex-col justify-evenly items-center"
       >
         <header class="w-full">
-          <h3 class="text-start font-medium text-4xl mb-12 opacity-90">
+          <h3 class="text-start font-medium text-4xl mb-12 text-blue-900">
             Servicio de Asistencia
           </h3>
         </header>
@@ -132,14 +143,16 @@ import IconInstagram from "../icons/IconInstagram.astro";
             class="flex gap-6 flex-col p-8 h-full rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] bg-white/60"
           >
             <div>
-              <h4 class="mb-4 text-2xl text-start font-semibold text-blue-900">
+              <h4 class="mb-4 text-2xl text-start font-semibold text-blue-800">
                 Contactate con nosostros las 24hs, los 365 dias de año.
               </h4>
-              <a class="flex mb-2 gap-1 items-center text-xl" href="/"
-                ><IconPhone class="w-8" />- 0-810-999-3200</a
+              <a
+                class="flex mb-3 gap-1 items-center text-xl"
+                href="/"><IconPhone class="w-8" />- 0-810-999-3200</a
               >
-              <a class="flex mb-2 gap-1 items-center text-xl" href="/"
-                ><IconWhatsapp class="w-8" />- +54 9 11 3765-0687</a
+              <a
+                class="flex mb-3 gap-1 items-center text-xl"
+                href="/"><IconWhatsapp class="w-8" />- +54 9 11 3765-0687</a
               >
               <a class="flex gap-1 items-center text-xl" href="/"
                 ><IconMail class="w-8" />
@@ -148,23 +161,24 @@ import IconInstagram from "../icons/IconInstagram.astro";
             </div>
 
             <div>
-              <h4 class="mb-4 text-2xl text-start font-semibold text-blue-900">
+              <h4 class="mb-4 text-2xl text-start font-semibold text-blue-800">
                 Seguinos en nuestras redes sociales para mantenerte informado.
               </h4>
-              <a class="flex mb-2 gap-1 items-center text-xl" href="/"
-                ><IconFacebook class="w-8" />- Facebook</a
+              <a
+                class="flex mb-3 gap-1 items-center text-xl"
+                href="/"><IconFacebook class="w-8" />- Facebook</a
               >
               <a class="flex gap-1 items-center text-xl" href="/"
                 ><IconInstagram class="w-8" />
-                - Instagram</a
-              >
+                - Instagram
+              </a>
             </div>
           </div>
 
           <div
             class="flex p-8 h-full flex-col rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] bg-white/60"
           >
-            <h4 class="mb-4 text-2xl text-start font-semibold text-blue-900">
+            <h4 class="mb-4 text-2xl text-start font-semibold text-blue-800">
               Ubicación: Blvd. Olimpico Jose Benjamin Zubiaur 4385, Buenos Aires
             </h4>
             <iframe
@@ -185,61 +199,73 @@ import IconInstagram from "../icons/IconInstagram.astro";
         class="w-full max-w-[1440px] flex flex-col justify-evenly items-center"
       >
         <header class="w-full">
-          <h3 class="text-start font-medium text-4xl mb-12 opacity-90">
+          <h3 class="text-start font-medium text-4xl mb-12 text-blue-900">
             Metodos de Pago
           </h3>
         </header>
         <footer
-          class="w-full grid gap-10 py-12 justify-between grid-cols-auto-pagos text-center text-2xl bg-white/60 rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)]"
+          class="w-full grid gap-10 py-12 justify-between grid-cols-auto-pagos text-center text-2xl"
         >
-          <a class="flex justify-center items-center" href="/"
-            ><img
-              class="w-36 object-contain aspect-video"
-              src="../img/logo-pagofacil.webp"
-              alt=""
-            /></a
+          <picture class="flex w-full justify-center">
+            <SavingsSvg />
+          </picture>
+          <div
+            class="flex h-full flex-col p-8 rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] bg-white/60"
           >
-          <a class="flex justify-center items-center" href="/"
-            ><img
-              class="w-36 object-contain aspect-video"
-              src="../img/logo-rapipago.webp"
-              alt=""
-            /></a
-          >
-          <a class="flex justify-center items-center" href="/"
-            ><img
-              class="w-36 object-contain aspect-video"
-              src="../img/logo-pagofacil.webp"
-              alt=""
-            /></a
-          >
-          <a class="flex justify-center items-center" href="/"
-            ><img
-              class="w-36 object-contain aspect-video"
-              src="../img/logo-rapipago.webp"
-              alt=""
-            /></a
-          >
-          <a class="flex justify-center items-center" href="/"
-            ><img
-              class="w-36 object-contain aspect-video"
-              src="../img/logo-pagofacil.webp"
-              alt=""
-            /></a
-          >
-          <a class="flex justify-center items-center" href="/"
-            ><img
-              class="w-36 object-contain aspect-video"
-              src="../img/logo-rapipago.webp"
-              alt=""
-            /></a
-          >
+            <header class="flex gap-2 justify-center">
+              <IconPig class="w-12 h-12" />
+              <span class="text-3xl leading-normal text-blue-700 font-semibold"
+                >Ahorrá hasta un 30%</span>
+            </header>
+            <footer>
+              <p class="mb-8">con tu nueva póliza y sumá más beneficios.</p>
+              <div class="w-full text-start">
+                <p class="mb-2 font-medium">Abona con tu metodo pago de preferencia.</p>
+                <ul>
+                  <li class="flex gap-2 mb-1"><IconCheck class="w-7"/>Tarjetas (Credito | Debito)</li>
+                  <li class="flex gap-2 mb-1"><IconCheck class="w-7"/>Transferencias Bancarias</li>
+                  <li class="flex gap-2 mb-1"><IconCheck class="w-7"/>Mercado Pago</li>
+                  <li class="flex gap-2 mb-1"><IconCheck class="w-7"/>Efectivo</li>
+                </ul>
+              </div>
+            </footer>
+          </div>
         </footer>
       </div>
     </section>
 
-    <a href="/" class="w-14 h-14 fixed right-6 bottom-10">
-      <IconWhatsapp class="w-14 h-14" />
+    <!-- <section class="flex justify-center w-full h-full px-24 py-16">
+      <div
+        class="w-full max-w-[1440px] flex flex-col justify-evenly items-center"
+      >
+        <header class="w-full">
+          <h3 class="text-start text-blue-900 font-medium text-4xl mb-12">
+            Beneficios
+          </h3>
+        </header>
+        <footer
+          class="w-full grid gap-10 justify-between grid-cols-auto-contact text-center text-2xl"
+        >
+          <div
+            class="flex justify-center h-full p-8 rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] bg-white/60"
+          >
+            <p class="flex flex-col items-center justify-center">
+              <span class="text-3xl text-blue-700 font-semibold mr-2"
+                >+25 Años</span
+              >de experiencia en el rubro.
+            </p>
+          </div>
+
+          <div
+            class="flex h-full flex-col p-8 rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] bg-white/60"
+          >
+          </div>
+        </footer>
+      </div>
+    </section> -->
+
+    <a href="/" class="w-12 h-12 fixed right-6 bottom-10">
+      <IconWhatsapp class="w-12 h-12" />
     </a>
   </main>
 </Layout>
