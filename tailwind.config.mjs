@@ -5,7 +5,7 @@ export default {
 		extend: {
 			gridTemplateColumns: {
 				'auto-fit': 'repeat(auto-fit, minmax(260px, 1fr))',
-				'auto-hero': 'repeat(auto-fit, minmax(600px, 1fr))',
+				'auto-hero': 'repeat(auto-fit, minmax(500px, 1fr))',
 				'auto-pagos': 'repeat(auto-fit, minmax(460px, 1fr))',
 				'auto-contact': 'repeat(auto-fit, minmax(400px, 1fr))',
 			}
