@@ -10,8 +10,10 @@ import IconFacebook from "../icons/IconFacebook.astro";
 import IconInstagram from "../icons/IconInstagram.astro";
 import IconPig from "../icons/IconPig.astro";
 import IconCheck from "../icons/IconCheck.astro";
+import Link from "../components/Link.astro";
 
 import { seguros } from "../Js/seguros";
+import { links } from "../Js/links";
 ---
 
 <Layout title="DAFA - Asesores de Seguros">
@@ -47,7 +49,7 @@ import { seguros } from "../Js/seguros";
   </header>
 
   <main>
-    <section class="flex justify-center w-full h-full p-24">
+    <!-- <section class="flex justify-center w-full h-full p-24">
       <div class="w-full max-w-[1440px] grid grid-cols-auto-hero items-center">
         <header class="place-self-center">
           <h2 class="text-6xl text-blue-900 mb-6 font-semibold">
@@ -70,7 +72,7 @@ import { seguros } from "../Js/seguros";
           </figure>
         </footer>
       </div>
-    </section>
+    </section> -->
 
     <section class="flex justify-center w-full h-full px-24 py-16">
       <div
@@ -80,7 +82,12 @@ import { seguros } from "../Js/seguros";
           <h3 class="text-start font-medium text-4xl text-blue-900 mb-4">
             Conoce nuestro Seguros
           </h3>
-          <a
+          {
+            seguros.map(({ id, title, icon}) => {
+              return <Card id={id} title={title} icon={icon}/>;
+            })
+          }
+          <!-- <a
             href="/"
             class="text-[17px] inline-block mr-1 mb-12 py-[5px] px-5 tracking-wide rounded-full font-medium shadow-[0_8px_30px_rgb(0,0,0,0.12)] bg-blue-800 text-white"
             >Personas</a
@@ -94,7 +101,7 @@ import { seguros } from "../Js/seguros";
             href="/"
             class="text-[17px] inline-block mr-1 mb-12 py-[5px] px-5 tracking-wide rounded-full font-medium shadow-[0_8px_30px_rgb(0,0,0,0.12)] bg-white/60 text-blue-800"
             >Transporte de Pasajeros</a
-          >
+          > -->
         </header>
         <footer
           class="w-full grid gap-10 justify-between grid-cols-auto-fit text-center text-2xl"
