@@ -1,8 +1,11 @@
 ---
-    const {content, href} = Astro.props;
+const { id, title, icon } = Astro.props;
 ---
-<a class="h-[240px] bg-white/60 text-2xl max-h-full flex flex-col gap-3 justify-center items-center rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)]" href={href}>
-    <slot/>
-    <span>{content}</span>
-    </a
-  >
+
+<a
+  href={id}
+  class="h-[240px] bg-white/60 text-2xl max-h-full flex flex-col gap-3 justify-center items-center rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)]"
+>
+  <img src={icon} alt={title} />
+  <span>{title}</span>
+</a>
