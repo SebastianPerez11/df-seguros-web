@@ -2,8 +2,8 @@
 import { c as createAstro, d as createComponent, r as renderTemplate, f as renderComponent, m as maybeRenderHead } from '../astro_AWKQuW1f.mjs';
 import 'kleur/colors';
 import 'html-escaper';
-import { b as $$HeroSvg, l as links, c as $$LinkSection, s as seguros, a as $$Card, $ as $$Layout } from './_link__B53BImoT.mjs';
-import { $ as $$IconPhone, a as $$IconWhatsapp, b as $$IconMail, c as $$IconFacebook, d as $$IconInstagram, e as $$SavingsSvg, f as $$IconPig, g as $$IconCheck } from './_seguro__d05fre_L.mjs';
+import { b as $$HeroSvg, l as links, c as $$LinkSection, s as seguros, a as $$Card, $ as $$Layout } from './_link__D1lbwxuK.mjs';
+import { $ as $$IconPhone, a as $$IconWhatsapp, b as $$IconMail, c as $$IconFacebook, d as $$IconInstagram, e as $$SavingsSvg, f as $$IconPig, g as $$IconCheck } from './_seguro__Djs7XOvS.mjs';
 
 const $$Astro = createAstro();
 const $$Index = createComponent(async ($$result, $$props, $$slots) => {
