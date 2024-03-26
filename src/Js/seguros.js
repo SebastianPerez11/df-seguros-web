@@ -2,36 +2,31 @@ export const seguros = [
     {
         id: "automotores",
         title: "Automotores",
-        icon: "../img/IconAuto.svg",
+        icon: "../src/img/IconAuto.svg",
     },
     {
         id: "motos",
         title: "Motos",
-        icon: "../img/IconMoto.svg",
+        icon: "../src/img/IconMoto.svg",
     },
     {
         id: "bicicletas",
         title: "Bicicletas",
-        icon: "../img/IconBicicleta.svg",
+        icon: "../src/img/IconBicicleta.svg",
     },
     {
         id: "hogar",
         title: "Hogar",
-        icon: "../img/IconHogar.svg",
+        icon: "../src/img/IconHogar.svg",
     },
     {
         id: "accidentes",
         title: "Accidentes",
-        icon: "../img/IconAccidente.svg",
+        icon: "../src/img/IconAccidente.svg",
     },
     {
         id: "vida",
         title: "Vida",
-        icon: "../img/IconVida.svg",
+        icon: "../src/img/IconVida.svg",
     },
-
-
-
-
-
 ]

@@ -5,7 +5,10 @@ export const links = [
     },
     {
         id: "profesionales",
-        title: "Profesionales",
+        title: "Empresas y Profesionales",
     },
-
+    {
+        id: "transporte",
+        title: "Transporte de Pasajeros",
+    },
 ]

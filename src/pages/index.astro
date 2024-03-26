@@ -10,8 +10,7 @@ import IconFacebook from "../icons/IconFacebook.astro";
 import IconInstagram from "../icons/IconInstagram.astro";
 import IconPig from "../icons/IconPig.astro";
 import IconCheck from "../icons/IconCheck.astro";
-import Link from "../components/Link.astro";
-
+import LinkSection from "../components/LinkSection.astro";
 import { seguros } from "../Js/seguros";
 import { links } from "../Js/links";
 ---
@@ -49,7 +48,7 @@ import { links } from "../Js/links";
   </header>
 
   <main>
-    <!-- <section class="flex justify-center w-full h-full p-24">
+    <section class="flex justify-center w-full h-full p-24">
       <div class="w-full max-w-[1440px] grid grid-cols-auto-hero items-center">
         <header class="place-self-center">
           <h2 class="text-6xl text-blue-900 mb-6 font-semibold">
@@ -72,7 +71,7 @@ import { links } from "../Js/links";
           </figure>
         </footer>
       </div>
-    </section> -->
+    </section>
 
     <section class="flex justify-center w-full h-full px-24 py-16">
       <div
@@ -83,34 +82,19 @@ import { links } from "../Js/links";
             Conoce nuestro Seguros
           </h3>
           {
-            seguros.map(({ id, title, icon}) => {
-              return <Card id={id} title={title} icon={icon}/>;
+            links.map(({ id, title}) => {
+              return <LinkSection id={id} title={title} />;
             })
           }
-          <!-- <a
-            href="/"
-            class="text-[17px] inline-block mr-1 mb-12 py-[5px] px-5 tracking-wide rounded-full font-medium shadow-[0_8px_30px_rgb(0,0,0,0.12)] bg-blue-800 text-white"
-            >Personas</a
-          >
-          <a
-            href="/"
-            class="text-[17px] inline-block mr-1 mb-12 py-[5px] px-5 tracking-wide rounded-full font-medium shadow-[0_8px_30px_rgb(0,0,0,0.12)] bg-white/60 text-blue-800"
-            >Empresas y Profesionales</a
-          >
-          <a
-            href="/"
-            class="text-[17px] inline-block mr-1 mb-12 py-[5px] px-5 tracking-wide rounded-full font-medium shadow-[0_8px_30px_rgb(0,0,0,0.12)] bg-white/60 text-blue-800"
-            >Transporte de Pasajeros</a
-          > -->
         </header>
         <footer
           class="w-full grid gap-10 justify-between grid-cols-auto-fit text-center text-2xl"
         >
-        {
-          seguros.map(({ id, title, icon}) => {
-            return <Card id={id} title={title} icon={icon}/>;
-          })
-        }
+          {
+            seguros.map(({ id, title, icon }) => {
+              return <Card id={id} title={title} icon={icon} />;
+            })
+          }
         </footer>
       </div>
     </section>
@@ -134,13 +118,11 @@ import { links } from "../Js/links";
               <h4 class="mb-4 text-2xl text-start font-semibold text-blue-800">
                 Contactate con nosostros las 24hs, los 365 dias de año.
               </h4>
-              <a
-                class="flex mb-3 gap-1 items-center text-xl"
-                href="/"><IconPhone class="w-8" />- 0-810-999-3200</a
+              <a class="flex mb-3 gap-1 items-center text-xl" href="/"
+                ><IconPhone class="w-8" />- 0-810-999-3200</a
               >
-              <a
-                class="flex mb-3 gap-1 items-center text-xl"
-                href="/"><IconWhatsapp class="w-8" />- +54 9 11 3765-0687</a
+              <a class="flex mb-3 gap-1 items-center text-xl" href="/"
+                ><IconWhatsapp class="w-8" />- +54 9 11 3765-0687</a
               >
               <a class="flex gap-1 items-center text-xl" href="/"
                 ><IconMail class="w-8" />
@@ -152,9 +134,8 @@ import { links } from "../Js/links";
               <h4 class="mb-4 text-2xl text-start font-semibold text-blue-800">
                 Seguinos en nuestras redes sociales para mantenerte informado.
               </h4>
-              <a
-                class="flex mb-3 gap-1 items-center text-xl"
-                href="/"><IconFacebook class="w-8" />- Facebook</a
+              <a class="flex mb-3 gap-1 items-center text-xl" href="/"
+                ><IconFacebook class="w-8" />- Facebook</a
               >
               <a class="flex gap-1 items-center text-xl" href="/"
                 ><IconInstagram class="w-8" />
@@ -203,17 +184,28 @@ import { links } from "../Js/links";
             <header class="flex gap-2 justify-center">
               <IconPig class="w-12 h-12" />
               <span class="text-3xl leading-normal text-blue-700 font-semibold"
-                >Ahorrá hasta un 30%</span>
+                >Ahorrá hasta un 30%</span
+              >
             </header>
             <footer>
               <p class="mb-8">con tu nueva póliza y sumá más beneficios.</p>
               <div class="w-full text-start">
-                <p class="mb-2 font-medium">Abona con tu metodo pago de preferencia.</p>
+                <p class="mb-2 font-medium">
+                  Abona con tu metodo pago de preferencia.
+                </p>
                 <ul>
-                  <li class="flex gap-2 mb-1"><IconCheck class="w-7"/>Tarjetas (Credito | Debito)</li>
-                  <li class="flex gap-2 mb-1"><IconCheck class="w-7"/>Transferencias Bancarias</li>
-                  <li class="flex gap-2 mb-1"><IconCheck class="w-7"/>Mercado Pago</li>
-                  <li class="flex gap-2 mb-1"><IconCheck class="w-7"/>Efectivo</li>
+                  <li class="flex gap-2 mb-1">
+                    <IconCheck class="w-7" />Tarjetas (Credito | Debito)
+                  </li>
+                  <li class="flex gap-2 mb-1">
+                    <IconCheck class="w-7" />Transferencias Bancarias
+                  </li>
+                  <li class="flex gap-2 mb-1">
+                    <IconCheck class="w-7" />Mercado Pago
+                  </li>
+                  <li class="flex gap-2 mb-1">
+                    <IconCheck class="w-7" />Efectivo
+                  </li>
                 </ul>
               </div>
             </footer>
@@ -256,4 +248,5 @@ import { links } from "../Js/links";
       <IconWhatsapp class="w-12 h-12" />
     </a>
   </main>
+  
 </Layout>

@@ -14,10 +14,10 @@ import IconCheck from "../icons/IconCheck.astro";
 import { seguros } from "../Js/seguros";
 const { seguro } = Astro.params;
 
-const info = seguros.find((b) => b.id === seguro);
+const info = seguros.find((p) => p.id === seguro);
 ---
 
-<Layout title={info.title}>
+<Layout title=`${info.title}`>
   <header class="flex justify-center w-full h-full py-6 px-24">
     <div class="w-full max-w-[1440px] flex justify-between items-center">
       <figure>
@@ -77,13 +77,21 @@ const info = seguros.find((b) => b.id === seguro);
         <footer
           class="w-full grid gap-10 justify-between grid-cols-auto-fit text-center text-2xl"
         >
-           {
+          {
             seguros.map(({ id, title, icon }) => {
               if (title === info.title) {
                 return <Card id={id} title={title} icon={icon} />;
               }
             })
           }
+          <div>
+            <p class="text-start">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Distinctio, aliquam minus! Obcaecati porro esse odio dolores
+              blanditiis dicta assumenda fuga numquam suscipit officia adipisci
+              recusandae, dolor nemo itaque rem nihil.
+            </p>
+          </div>
         </footer>
       </div>
     </section>
@@ -107,13 +115,11 @@ const info = seguros.find((b) => b.id === seguro);
               <h4 class="mb-4 text-2xl text-start font-semibold text-blue-800">
                 Contactate con nosostros las 24hs, los 365 dias de año.
               </h4>
-              <a
-                class="flex mb-3 gap-1 items-center text-xl"
-                href="/"><IconPhone class="w-8" />- 0-810-999-3200</a
+              <a class="flex mb-3 gap-1 items-center text-xl" href="/"
+                ><IconPhone class="w-8" />- 0-810-999-3200</a
               >
-              <a
-                class="flex mb-3 gap-1 items-center text-xl"
-                href="/"><IconWhatsapp class="w-8" />- +54 9 11 3765-0687</a
+              <a class="flex mb-3 gap-1 items-center text-xl" href="/"
+                ><IconWhatsapp class="w-8" />- +54 9 11 3765-0687</a
               >
               <a class="flex gap-1 items-center text-xl" href="/"
                 ><IconMail class="w-8" />
@@ -125,9 +131,8 @@ const info = seguros.find((b) => b.id === seguro);
               <h4 class="mb-4 text-2xl text-start font-semibold text-blue-800">
                 Seguinos en nuestras redes sociales para mantenerte informado.
               </h4>
-              <a
-                class="flex mb-3 gap-1 items-center text-xl"
-                href="/"><IconFacebook class="w-8" />- Facebook</a
+              <a class="flex mb-3 gap-1 items-center text-xl" href="/"
+                ><IconFacebook class="w-8" />- Facebook</a
               >
               <a class="flex gap-1 items-center text-xl" href="/"
                 ><IconInstagram class="w-8" />
@@ -176,17 +181,28 @@ const info = seguros.find((b) => b.id === seguro);
             <header class="flex gap-2 justify-center">
               <IconPig class="w-12 h-12" />
               <span class="text-3xl leading-normal text-blue-700 font-semibold"
-                >Ahorrá hasta un 30%</span>
+                >Ahorrá hasta un 30%</span
+              >
             </header>
             <footer>
               <p class="mb-8">con tu nueva póliza y sumá más beneficios.</p>
               <div class="w-full text-start">
-                <p class="mb-2 font-medium">Abona con tu metodo pago de preferencia.</p>
+                <p class="mb-2 font-medium">
+                  Abona con tu metodo pago de preferencia.
+                </p>
                 <ul>
-                  <li class="flex gap-2 mb-1"><IconCheck class="w-7"/>Tarjetas (Credito | Debito)</li>
-                  <li class="flex gap-2 mb-1"><IconCheck class="w-7"/>Transferencias Bancarias</li>
-                  <li class="flex gap-2 mb-1"><IconCheck class="w-7"/>Mercado Pago</li>
-                  <li class="flex gap-2 mb-1"><IconCheck class="w-7"/>Efectivo</li>
+                  <li class="flex gap-2 mb-1">
+                    <IconCheck class="w-7" />Tarjetas (Credito | Debito)
+                  </li>
+                  <li class="flex gap-2 mb-1">
+                    <IconCheck class="w-7" />Transferencias Bancarias
+                  </li>
+                  <li class="flex gap-2 mb-1">
+                    <IconCheck class="w-7" />Mercado Pago
+                  </li>
+                  <li class="flex gap-2 mb-1">
+                    <IconCheck class="w-7" />Efectivo
+                  </li>
                 </ul>
               </div>
             </footer>
