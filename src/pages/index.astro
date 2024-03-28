@@ -10,7 +10,9 @@ import IconFacebook from "../icons/IconFacebook.astro";
 import IconInstagram from "../icons/IconInstagram.astro";
 import IconPig from "../icons/IconPig.astro";
 import IconCheck from "../icons/IconCheck.astro";
+import Section from "../components/Section.astro";
 import LinkSection from "../components/LinkSection.astro";
+import TitleSection from "../components/TitleSection.astro";
 import { seguros } from "../Js/seguros";
 import { links } from "../Js/links";
 ---
@@ -48,171 +50,153 @@ import { links } from "../Js/links";
   </header>
 
   <main>
-    <section class="flex justify-center w-full h-full p-24">
-      <div class="w-full max-w-[1440px] grid grid-cols-auto-hero items-center">
+    <section class="flex justify-center w-full h-full p-24 max-sm:px-4">
+      <div class="w-full max-w-[1440px] grid grid-cols-auto-hero justify-center items-center">
         <header class="place-self-center">
-          <h2 class="text-6xl max-lg:text-5xl text-blue-900 mb-6 font-semibold">
+          <h2 class="text-6xl max-lg:text-5xl max-sm:text-4xl text-blue-900 mb-6 font-semibold">
             Elegí estar seguro
           </h2>
-          <p class="text-[21px] max-lg:text-lg max-w-[60ch] w-full mb-6">
+          <p class="w-full text-[21px] max-lg:text-lg max-w-[60ch] mb-6 max-sm:w-[36ch]">
             Somos <span class="font-semibold text-blue-800"
               >Productores Asesores de Seguros</span
             > con mas de 25 años de experiencia en el rubro. Trabajamos con las mejores
             compañias aseguradoras del mercado.
           </p>
           <a
-            class="bg-blue-800 text-lg mr-1 font-medium tracking-wide rounded-md text-white px-10 py-[10px] max-lg:text-base max-lg:px-8  max-lg:py-2"
+            class="bg-blue-800 text-lg mr-1 font-medium tracking-wide rounded-md text-white px-10 py-[10px] max-lg:text-base max-lg:px-8 max-lg:py-2"
             href="/">Contactanos</a
           >
         </header>
         <footer class="place-self-center">
           <figure class="flex w-full justify-center">
-            <HeroSvg class="w-[600px] xl:w-[500px] max-lg:w-[480px]" />
+            <HeroSvg class="w-[600px] xl:w-[500px] max-lg:w-[480px] max-sm:w-[350px]" />
           </figure>
         </footer>
       </div>
     </section>
 
-    <section class="flex justify-center w-full h-full px-24 py-16">
-      <div
-        class="w-full max-w-[1440px] flex flex-col justify-evenly items-center"
+    <Section>
+      <header class="w-full">
+        <TitleSection title="Conoce nuestro Seguros" />
+        {
+          links.map(({ id, title }) => {
+            return <LinkSection id={id} title={title} />;
+          })
+        }
+      </header>
+      <footer
+        class="w-full grid gap-10 justify-between grid-cols-auto-fit text-center text-2xl"
       >
-        <header class="w-full">
-          <h3 class="text-start font-medium text-4xl text-blue-900 mb-4">
-            Conoce nuestro Seguros
-          </h3>
-          {
-            links.map(({ id, title}) => {
-              return <LinkSection id={id} title={title} />;
-            })
-          }
-        </header>
-        <footer
-          class="w-full grid gap-10 justify-between grid-cols-auto-fit text-center text-2xl"
-        >
-          {
-            seguros.map(({ id, title, icon }) => {
-              return <Card id={id} title={title} icon={icon} />;
-            })
-          }
-        </footer>
-      </div>
-    </section>
+        {
+          seguros.map(({ id, title, icon }) => {
+            return <Card id={id} title={title} icon={icon} />;
+          })
+        }
+      </footer>
+    </Section>
 
-    <section class="flex justify-center w-full h-full px-24 py-16">
-      <div
-        class="w-full max-w-[1440px] flex flex-col justify-evenly items-center"
+    <Section>
+      <header class="w-full">
+        <TitleSection title="Servicio de Asistencia" />
+      </header>
+      <footer
+        class="w-full grid gap-10 justify-between grid-cols-auto-contact text-center text-2xl"
       >
-        <header class="w-full">
-          <h3 class="text-start font-medium text-4xl mb-12 text-blue-900">
-            Servicio de Asistencia
-          </h3>
-        </header>
-        <footer
-          class="w-full grid gap-10 justify-between grid-cols-auto-contact text-center text-2xl"
+        <div
+          class="flex gap-6 flex-col p-8 h-full rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] bg-white/60"
         >
-          <div
-            class="flex gap-6 flex-col p-8 h-full rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] bg-white/60"
-          >
-            <div>
-              <h4 class="mb-4 text-2xl text-start font-semibold text-blue-800">
-                Contactate con nosostros las 24hs, los 365 dias de año.
-              </h4>
-              <a class="flex mb-3 gap-1 items-center text-xl" href="/"
-                ><IconPhone class="w-8" />- 0-810-999-3200</a
-              >
-              <a class="flex mb-3 gap-1 items-center text-xl" href="/"
-                ><IconWhatsapp class="w-8" />- +54 9 11 3765-0687</a
-              >
-              <a class="flex gap-1 items-center text-xl" href="/"
-                ><IconMail class="w-8" />
-                - info@segurosrivadavia.com</a
-              >
-            </div>
-
-            <div>
-              <h4 class="mb-4 text-2xl text-start font-semibold text-blue-800">
-                Seguinos en nuestras redes sociales para mantenerte informado.
-              </h4>
-              <a class="flex mb-3 gap-1 items-center text-xl" href="/"
-                ><IconFacebook class="w-8" />- Facebook</a
-              >
-              <a class="flex gap-1 items-center text-xl" href="/"
-                ><IconInstagram class="w-8" />
-                - Instagram
-              </a>
-            </div>
-          </div>
-
-          <div
-            class="flex p-8 h-full flex-col rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] bg-white/60"
-          >
+          <div>
             <h4 class="mb-4 text-2xl text-start font-semibold text-blue-800">
-              Ubicación: Blvd. Olimpico Jose Benjamin Zubiaur 4385, Buenos Aires
+              Contactate con nosostros las 24hs, los 365 dias de año.
             </h4>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13124.673232220037!2d-58.4542305!3d-34.6757014!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb1bc837b8a7%3A0x327c7c69ca37fa13!2sEdificio%2020!5e0!3m2!1sen!2sar!4v1711128214642!5m2!1sen!2sar"
-              width="100%"
-              height="300"
-              style="border:0;"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <a class="flex mb-3 gap-1 items-center text-xl" href="/"
+              ><IconPhone class="w-8" />- 0-810-999-3200</a
+            >
+            <a class="flex mb-3 gap-1 items-center text-xl" href="/"
+              ><IconWhatsapp class="w-8" />- +54 9 11 3765-0687</a
+            >
+            <a class="flex gap-1 items-center text-xl" href="/"
+              ><IconMail class="w-8" />
+              - info@segurosrivadavia.com</a
+            >
           </div>
-        </footer>
-      </div>
-    </section>
 
-    <section class="flex justify-center w-full h-full px-24 py-16">
-      <div
-        class="w-full max-w-[1440px] flex flex-col justify-evenly items-center"
-      >
-        <header class="w-full">
-          <h3 class="text-start font-medium text-4xl mb-12 text-blue-900">
-            Metodos de Pago
-          </h3>
-        </header>
-        <footer
-          class="w-full grid gap-10 py-12 justify-between grid-cols-auto-pagos text-center text-2xl"
-        >
-          <picture class="flex w-full justify-center">
-            <SavingsSvg class="w-96" />
-          </picture>
-          <div
-            class="flex h-full flex-col p-8 rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] bg-white/60"
-          >
-            <header class="flex gap-2 justify-center">
-              <IconPig class="w-12 h-12" />
-              <span class="text-3xl leading-normal text-blue-700 font-semibold"
-                >Ahorrá hasta un 30%</span
-              >
-            </header>
-            <footer>
-              <p class="mb-8">con tu nueva póliza y sumá más beneficios.</p>
-              <div class="w-full text-start">
-                <p class="mb-2 font-medium">
-                  Abona con tu metodo pago de preferencia.
-                </p>
-                <ul>
-                  <li class="flex gap-2 mb-1">
-                    <IconCheck class="w-7" />Tarjetas (Credito | Debito)
-                  </li>
-                  <li class="flex gap-2 mb-1">
-                    <IconCheck class="w-7" />Transferencias Bancarias
-                  </li>
-                  <li class="flex gap-2 mb-1">
-                    <IconCheck class="w-7" />Mercado Pago
-                  </li>
-                  <li class="flex gap-2 mb-1">
-                    <IconCheck class="w-7" />Efectivo
-                  </li>
-                </ul>
-              </div>
-            </footer>
+          <div>
+            <h4 class="mb-4 text-2xl text-start font-semibold text-blue-800">
+              Seguinos en nuestras redes sociales para mantenerte informado.
+            </h4>
+            <a class="flex mb-3 gap-1 items-center text-xl" href="/"
+              ><IconFacebook class="w-8" />- Facebook</a
+            >
+            <a class="flex gap-1 items-center text-xl" href="/"
+              ><IconInstagram class="w-8" />
+              - Instagram
+            </a>
           </div>
-        </footer>
-      </div>
-    </section>
+        </div>
+
+        <div
+          class="flex p-8 h-full flex-col rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] bg-white/60"
+        >
+          <h4 class="mb-4 text-2xl text-start font-semibold text-blue-800">
+            Ubicación: Blvd. Olimpico Jose Benjamin Zubiaur 4385, Buenos Aires
+          </h4>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13124.673232220037!2d-58.4542305!3d-34.6757014!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb1bc837b8a7%3A0x327c7c69ca37fa13!2sEdificio%2020!5e0!3m2!1sen!2sar!4v1711128214642!5m2!1sen!2sar"
+            width="100%"
+            height="300"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </footer>
+    </Section>
+
+    <Section>
+      <header class="w-full">
+        <TitleSection title="Metodos de Pago" />
+      </header>
+      <footer
+        class="w-full grid gap-10 py-12 justify-between grid-cols-auto-pagos text-center text-2xl"
+      >
+        <picture class="flex w-full justify-center">
+          <SavingsSvg class="w-96  max-sm:w-[280px]" />
+        </picture>
+        <div
+          class="flex h-full flex-col p-8 rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] bg-white/60"
+        >
+          <header class="flex gap-2 justify-center">
+            <IconPig class="w-12 h-12" />
+            <span class="text-3xl leading-normal text-blue-700 font-semibold"
+              >Ahorrá hasta un 30%</span
+            >
+          </header>
+          <footer class="">
+            <p class="mb-8">con tu nueva póliza y sumá más beneficios.</p>
+            <div class="w-full text-start">
+              <p class="mb-2 font-medium">
+                Abona con tu metodo pago de preferencia.
+              </p>
+              <ul>
+                <li class="flex gap-2 mb-1">
+                  <IconCheck class="w-7" />Tarjetas (Credito | Debito)
+                </li>
+                <li class="flex gap-2 mb-1">
+                  <IconCheck class="w-7" />Transferencias Bancarias
+                </li>
+                <li class="flex gap-2 mb-1">
+                  <IconCheck class="w-7" />Mercado Pago
+                </li>
+                <li class="flex gap-2 mb-1">
+                  <IconCheck class="w-7" />Efectivo
+                </li>
+              </ul>
+            </div>
+          </footer>
+        </div>
+      </footer>
+    </Section>
 
     <!-- <section class="flex justify-center w-full h-full px-24 py-16">
       <div
@@ -244,7 +228,11 @@ import { links } from "../Js/links";
       </div>
     </section> -->
 
-    <a href="https://wa.me/541140297164" target="_blank" class="w-12 h-12 fixed right-6 bottom-10">
+    <a
+      href="https://wa.me/541140297164"
+      target="_blank"
+      class="w-12 h-12 fixed right-6 bottom-10"
+    >
       <IconWhatsapp class="w-12 h-12" />
     </a>
   </main>
