@@ -4,10 +4,10 @@ export default {
 	theme: {
 		extend: {
 			gridTemplateColumns: {
-				'auto-fit': 'repeat(auto-fit, minmax(260px, 1fr))',
-				'auto-hero': 'repeat(auto-fit, minmax(300px, 1fr))',
-				'auto-pagos': 'repeat(auto-fit, minmax(300px, 1fr))',
-				'auto-contact': 'repeat(auto-fit, minmax(300px, 1fr))',
+				'auto-fit': 'repeat(auto-fit, minmax(270px, 1fr))',
+				'auto-hero': 'repeat(auto-fit, minmax(270px, 1fr))',
+				'auto-pagos': 'repeat(auto-fit, minmax(270px, 1fr))',
+				'auto-contact': 'repeat(auto-fit, minmax(270px, 1fr))',
 			}
 		},
 	},
