@@ -16,7 +16,7 @@ import { links } from "../Js/links";
 ---
 
 <Layout title="DAFA - Asesores de Seguros">
-  <header class="flex justify-center w-full h-full py-6 px-24">
+  <header class="flex justify-center w-full h-full py-6 px-24 max-xl:hidden">
     <div class="w-full max-w-[1440px] flex justify-between items-center">
       <figure>
         <a href="/">
@@ -51,23 +51,23 @@ import { links } from "../Js/links";
     <section class="flex justify-center w-full h-full p-24">
       <div class="w-full max-w-[1440px] grid grid-cols-auto-hero items-center">
         <header class="place-self-center">
-          <h2 class="text-6xl text-blue-900 mb-6 font-semibold">
+          <h2 class="text-6xl max-lg:text-5xl text-blue-900 mb-6 font-semibold">
             Elegí estar seguro
           </h2>
-          <p class="text-[21px] max-w-[60ch] w-full mb-6">
+          <p class="text-[21px] max-lg:text-lg max-w-[60ch] w-full mb-6">
             Somos <span class="font-semibold text-blue-800"
               >Productores Asesores de Seguros</span
             > con mas de 25 años de experiencia en el rubro. Trabajamos con las mejores
             compañias aseguradoras del mercado.
           </p>
           <a
-            class="bg-blue-800 text-lg mr-1 font-medium tracking-wide rounded-md text-white px-10 py-[10px]"
+            class="bg-blue-800 text-lg mr-1 font-medium tracking-wide rounded-md text-white px-10 py-[10px] max-lg:text-base max-lg:px-8  max-lg:py-2"
             href="/">Contactanos</a
           >
         </header>
         <footer class="place-self-center">
           <figure class="flex w-full justify-center">
-            <HeroSvg class="w-[600px] xl:w-[500px]" />
+            <HeroSvg class="w-[600px] xl:w-[500px] max-lg:w-[480px]" />
           </figure>
         </footer>
       </div>
@@ -176,7 +176,7 @@ import { links } from "../Js/links";
           class="w-full grid gap-10 py-12 justify-between grid-cols-auto-pagos text-center text-2xl"
         >
           <picture class="flex w-full justify-center">
-            <SavingsSvg />
+            <SavingsSvg class="w-96" />
           </picture>
           <div
             class="flex h-full flex-col p-8 rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] bg-white/60"
