@@ -10,6 +10,7 @@ import IconFacebook from "../icons/IconFacebook.astro";
 import IconInstagram from "../icons/IconInstagram.astro";
 import IconPig from "../icons/IconPig.astro";
 import IconCheck from "../icons/IconCheck.astro";
+import IconMenu from "../icons/IconMenu.astro";
 import Section from "../components/Section.astro";
 import LinkSection from "../components/LinkSection.astro";
 import TitleSection from "../components/TitleSection.astro";
@@ -18,8 +19,10 @@ import { links } from "../Js/links";
 ---
 
 <Layout title="DAFA - Asesores de Seguros">
-  <header class="flex justify-center w-full h-full py-6 px-24 max-xl:hidden">
-    <div class="w-full max-w-[1440px] flex justify-between items-center">
+  <header class="flex justify-center w-full h-full py-6 px-24 max-sm:px-4">
+    <div
+      class="w-full max-w-[1440px] flex justify-between items-center max-xl:hidden"
+    >
       <figure>
         <a href="/">
           <h1 class="text-2xl font-semibold text-blue-800">
@@ -47,12 +50,35 @@ import { links } from "../Js/links";
         </ul>
       </nav>
     </div>
+
+    <div
+      class="w-full max-w-[1440px] flex justify-between items-center xl:hidden"
+    >
+      <h1 class="text-blue-800 text-xl z-50 font-semibold">Dafa-Icon</h1>
+      <figure class="w-10 z-40">
+        <IconMenu id="menu" class="w-10" />
+      </figure>
+      <div
+        id="menuNesting"
+        class="bg-blue-50 gap-10 flex flex-col pt-20 pl-4 top-0 right-0 translate-x-[100%] transition-transform fixed z-20 w-full h-screen text-black/80 font-medium text-xl"
+      >
+        <a href="/normal/">- Personas</a>
+
+        <a href="/">- Empresas y Profesionales</a>
+
+        <a href="/">- Transporte de Pasajeros</a>
+
+        <a href="/">- Institucional</a>
+      </div>
+    </div>
   </header>
 
   <main>
-    <section class="flex justify-center w-full h-full p-24 max-sm:px-4">
+    <section
+      class="flex justify-center w-full h-full p-24 max-sm:py-10 max-sm:px-4"
+    >
       <div
-        class="w-full max-w-[1440px] grid grid-cols-auto-hero justify-center items-center"
+        class="w-full max-w-[1440px] grid gap-2 grid-cols-auto-hero justify-center items-center"
       >
         <header class="place-self-center">
           <h2
@@ -177,7 +203,7 @@ import { links } from "../Js/links";
           <header class="flex gap-2 justify-center items-center">
             <IconPig class="w-12 h-12" />
             <span
-              class="text-3xl leading-normal text-blue-700 font-semibold text-pretty"
+              class="text-3xl max-sm:w-[12ch] leading-normal text-blue-700 font-semibold text-pretty"
               >Ahorrá hasta un 30%</span
             >
           </header>
@@ -187,7 +213,7 @@ import { links } from "../Js/links";
               <p class="mb-4 font-medium">
                 Abona con tu metodo pago de preferencia.
               </p>
-              <ul>
+              <ul class="text-2xl max-sm:text-[22px]">
                 <li class="flex gap-2 mb-2">
                   <IconCheck class="w-7" />Tarjetas (Credito | Debito)
                 </li>
