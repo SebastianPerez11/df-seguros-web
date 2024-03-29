@@ -5,7 +5,7 @@ const { id, title, icon } = Astro.props;
 <a
   style={`view-transition-name: card-${id};`}
   href=`/${id}/`
-  class="h-[240px] bg-white/60 text-2xl max-h-full flex flex-col gap-3 justify-center items-center rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)]"
+  class="h-[240px] max-sm:h-[220px] bg-white/60 text-2xl max-h-full flex flex-col gap-3 justify-center items-center rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)]"
 >
   <img src=`../${icon}` alt={title} />
   <span>{title}</span>

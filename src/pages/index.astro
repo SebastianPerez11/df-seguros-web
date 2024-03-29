@@ -51,12 +51,18 @@ import { links } from "../Js/links";
 
   <main>
     <section class="flex justify-center w-full h-full p-24 max-sm:px-4">
-      <div class="w-full max-w-[1440px] grid grid-cols-auto-hero justify-center items-center">
+      <div
+        class="w-full max-w-[1440px] grid grid-cols-auto-hero justify-center items-center"
+      >
         <header class="place-self-center">
-          <h2 class="text-6xl max-lg:text-5xl max-sm:text-4xl text-blue-900 mb-6 font-semibold">
+          <h2
+            class="text-6xl max-lg:text-5xl max-sm:text-[38px] text-blue-900 mb-6 font-semibold"
+          >
             Elegí estar seguro
           </h2>
-          <p class="w-full text-[21px] max-lg:text-lg max-w-[60ch] mb-6 max-sm:w-[32ch]">
+          <p
+            class="w-full text-[21px] max-lg:text-lg max-w-[60ch] mb-6 max-sm:w-[32ch]"
+          >
             Somos <span class="font-semibold text-blue-800"
               >Productores Asesores de Seguros</span
             > con mas de 25 años de experiencia en el rubro. Trabajamos con las mejores
@@ -69,7 +75,9 @@ import { links } from "../Js/links";
         </header>
         <footer class="place-self-center">
           <figure class="flex w-full justify-center">
-            <HeroSvg class="2xl:w-[600px] xl:w-[500px] max-lg:w-[480px] max-sm:w-[350px]" />
+            <HeroSvg
+              class="2xl:w-[600px] xl:w-[500px] max-lg:w-[480px] max-sm:w-[350px]"
+            />
           </figure>
         </footer>
       </div>
@@ -85,7 +93,7 @@ import { links } from "../Js/links";
         }
       </header>
       <footer
-        class="w-full grid gap-10 justify-between grid-cols-auto-fit text-center text-2xl"
+        class="w-full grid gap-10 max-sm:gap-5 justify-between grid-cols-auto-fit text-center text-2xl"
       >
         {
           seguros.map(({ id, title, icon }) => {
@@ -103,7 +111,7 @@ import { links } from "../Js/links";
         class="w-full grid gap-10 justify-between grid-cols-auto-contact text-center text-2xl"
       >
         <div
-          class="flex gap-6 flex-col p-8 h-full rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] bg-white/60"
+          class="flex gap-6 flex-col p-8 max-sm:px-4 h-full rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] bg-white/60"
         >
           <div>
             <h4 class="mb-4 text-2xl text-start font-semibold text-blue-800">
@@ -136,7 +144,7 @@ import { links } from "../Js/links";
         </div>
 
         <div
-          class="flex p-8 h-full flex-col rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] bg-white/60"
+          class="flex p-8 max-sm:px-4 h-full flex-col rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] bg-white/60"
         >
           <h4 class="mb-4 text-2xl text-start font-semibold text-blue-800">
             Ubicación: Blvd. Olimpico Jose Benjamin Zubiaur 4385, Buenos Aires
@@ -161,34 +169,35 @@ import { links } from "../Js/links";
         class="w-full grid gap-10 py-12 justify-between grid-cols-auto-pagos text-center text-2xl"
       >
         <picture class="flex w-full justify-center">
-          <SavingsSvg class="w-96  max-sm:w-[280px]" />
+          <SavingsSvg class="w-96 max-sm:w-[280px]" />
         </picture>
         <div
-          class="flex h-full flex-col p-8 rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] bg-white/60"
+          class="flex h-full flex-col p-8 max-sm:px-4 rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] bg-white/60"
         >
-          <header class="flex gap-2 justify-center">
+          <header class="flex gap-2 justify-center items-center">
             <IconPig class="w-12 h-12" />
-            <span class="text-3xl leading-normal text-blue-700 font-semibold"
+            <span
+              class="text-3xl leading-normal text-blue-700 font-semibold text-pretty"
               >Ahorrá hasta un 30%</span
             >
           </header>
-          <footer class="">
-            <p class="mb-8">con tu nueva póliza y sumá más beneficios.</p>
+          <footer>
+            <p class="mb-4">con tu nueva póliza y sumá más beneficios.</p>
             <div class="w-full text-start">
-              <p class="mb-2 font-medium">
+              <p class="mb-4 font-medium">
                 Abona con tu metodo pago de preferencia.
               </p>
               <ul>
-                <li class="flex gap-2 mb-1">
+                <li class="flex gap-2 mb-2">
                   <IconCheck class="w-7" />Tarjetas (Credito | Debito)
                 </li>
-                <li class="flex gap-2 mb-1">
+                <li class="flex gap-2 mb-2">
                   <IconCheck class="w-7" />Transferencias Bancarias
                 </li>
-                <li class="flex gap-2 mb-1">
+                <li class="flex gap-2 mb-2">
                   <IconCheck class="w-7" />Mercado Pago
                 </li>
-                <li class="flex gap-2 mb-1">
+                <li class="flex gap-2 mb-2">
                   <IconCheck class="w-7" />Efectivo
                 </li>
               </ul>
