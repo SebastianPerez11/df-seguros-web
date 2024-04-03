@@ -19,7 +19,7 @@ import Header from "../components/Header.astro";
 ---
 
 <Layout title="DAFA - Asesores de Seguros">
-  <Header/>
+  <Header />
   <main>
     <section
       class="flex justify-center w-full h-full p-24 max-sm:py-10 max-sm:px-4"
@@ -42,7 +42,7 @@ import Header from "../components/Header.astro";
             compañias aseguradoras del mercado.
           </p>
           <a
-            class="bg-blue-800 text-lg mr-1 font-medium tracking-wide rounded-md text-white px-10 py-[10px] max-lg:text-base max-lg:px-8 max-lg:py-2"
+            class="bg-blue-800 hover:bg-blue-900 transition-colors text-lg mr-1 font-medium tracking-wide rounded-md text-white px-10 py-[10px] max-lg:text-base max-lg:px-8 max-lg:py-2"
             href="/">Contactanos</a
           >
         </header>
@@ -61,7 +61,7 @@ import Header from "../components/Header.astro";
         <TitleSection title="Conoce nuestro Seguros" />
         {
           links.map(({ id, title }) => {
-            return <LinkSection id={id} title={title} />;
+            return <LinkSection id={id} title={title} />
           })
         }
       </header>
@@ -87,7 +87,9 @@ import Header from "../components/Header.astro";
           class="flex gap-6 flex-col p-8 max-sm:px-4 h-full rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] bg-white/60"
         >
           <div>
-            <h4 class="mb-4 text-2xl max-sm:text-[22px] text-start font-semibold text-blue-800">
+            <h4
+              class="mb-4 text-2xl max-sm:text-[22px] text-start font-semibold text-blue-800"
+            >
               Contactate con nosostros las 24hs, los 365 dias de año.
             </h4>
             <a class="flex mb-3 gap-1 items-center text-xl" href="/"
@@ -103,7 +105,9 @@ import Header from "../components/Header.astro";
           </div>
 
           <div>
-            <h4 class="mb-4 text-2xl max-sm:text-[22px] text-start font-semibold text-blue-800">
+            <h4
+              class="mb-4 text-2xl max-sm:text-[22px] text-start font-semibold text-blue-800"
+            >
               Seguinos en nuestras redes sociales para mantenerte informado.
             </h4>
             <a class="flex mb-3 gap-1 items-center text-xl" href="/"
@@ -119,7 +123,9 @@ import Header from "../components/Header.astro";
         <div
           class="flex p-8 max-sm:px-4 h-full flex-col rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] bg-white/60"
         >
-          <h4 class="mb-4 text-2xl max-sm:text-[22px] text-start font-semibold text-blue-800">
+          <h4
+            class="mb-4 text-2xl max-sm:text-[22px] text-start font-semibold text-blue-800"
+          >
             Ubicación: Blvd. Olimpico Jose Benjamin Zubiaur 4385, Buenos Aires
           </h4>
           <iframe
@@ -180,14 +186,18 @@ import Header from "../components/Header.astro";
         </div>
       </footer>
     </Section>
-    
+
+    <footer>
+      
+    </footer>
+
     <a
       href="https://wa.me/541140297164"
       target="_blank"
       class="w-12 h-12 fixed right-6 bottom-10"
       title="Ir a WhatsApp"
     >
-      <IconWhatsapp class="w-12 h-12" />
+      <IconWhatsapp class="w-12 h-12 transition-transform hover:scale-105" />
     </a>
   </main>
 </Layout>
