@@ -132,8 +132,8 @@ import { links } from "../Js/links";
         class="w-full grid gap-10 max-sm:gap-5 justify-between grid-cols-auto-fit text-center text-2xl"
       >
         {
-          seguros.map(({ id, title, icon }) => {
-            return <Card id={id} title={title} icon={icon} />;
+          seguros.map(({ id, title, icon, alt }) => {
+            return <Card id={id} title={title} icon={icon} alt={alt} />;
           })
         }
       </footer>
@@ -186,6 +186,7 @@ import { links } from "../Js/links";
             Ubicación: Blvd. Olimpico Jose Benjamin Zubiaur 4385, Buenos Aires
           </h4>
           <iframe
+            title="Ubicación de la Oficina"
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13124.673232220037!2d-58.4542305!3d-34.6757014!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb1bc837b8a7%3A0x327c7c69ca37fa13!2sEdificio%2020!5e0!3m2!1sen!2sar!4v1711128214642!5m2!1sen!2sar"
             width="100%"
             height="300"
@@ -247,6 +248,7 @@ import { links } from "../Js/links";
       href="https://wa.me/541140297164"
       target="_blank"
       class="w-12 h-12 fixed right-6 bottom-10"
+      title="Ir a WhatsApp"
     >
       <IconWhatsapp class="w-12 h-12" />
     </a>

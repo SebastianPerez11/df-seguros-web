@@ -100,9 +100,9 @@ const info = seguros.find((p) => p.id === seguro);
         class="w-full grid gap-10 max-sm:gap-5 justify-between grid-cols-auto-fit text-center text-2xl"
       >
         {
-          seguros.map(({ id, title, icon }) => {
+          seguros.map(({ id, title, icon, alt }) => {
             if (title === info.title) {
-              return <Card id={id} title={title} icon={icon} />;
+              return <Card id={id} title={title} icon={icon} alt={alt} />;
             }
           })
         }
