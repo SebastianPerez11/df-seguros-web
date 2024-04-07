@@ -16,6 +16,7 @@ import TitleSection from "../components/TitleSection.astro";
 import { seguros } from "../Js/seguros";
 import { links } from "../Js/links";
 import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout title="DAFA - Asesores de Seguros">
@@ -61,7 +62,7 @@ import Header from "../components/Header.astro";
         <TitleSection title="Conoce nuestro Seguros" />
         {
           links.map(({ id, title }) => {
-            return <LinkSection id={id} title={title} />
+            return <LinkSection id={id} title={title} />;
           })
         }
       </header>
@@ -187,9 +188,7 @@ import Header from "../components/Header.astro";
       </footer>
     </Section>
 
-    <footer>
-      
-    </footer>
+    <Footer />
 
     <a
       href="https://wa.me/541140297164"

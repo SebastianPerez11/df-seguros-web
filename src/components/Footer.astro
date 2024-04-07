@@ -1,0 +1,66 @@
+---
+import IconPhone from "../icons/IconPhone.astro";
+import IconMail from "../icons/IconMail.astro";
+import IconFacebook from "../icons/IconFacebook.astro";
+import IconInstagram from "../icons/IconInstagram.astro";
+---
+<footer class="flex justify-center w-full h-full px-24 py-10 max-sm:px-4 shadow-[0_8px_30px_rgb(0,0,0,0.12)] bg-white/60 rounded-tr-[30px] rounded-tl-[30px]">
+    <div
+      class="w-full max-w-[1440px] flex flex-col justify-evenly items-center"
+    >
+      <div
+        class="w-full grid gap-10 py-12 justify-between grid-cols-auto-footer text-center text-2xl"
+      >
+        <figure class="flex flex-col">
+          <a class="mb-4" href="/">
+            <h1 class="text-[26px] text-start font-semibold text-blue-800">
+              DAFA - Asesores de Seguros
+            </h1>
+          </a>
+          <footer class="flex">
+            <img
+              class="w-16 object-contain aspect-video mr-3"
+              src="../../img/DataFiscal.jpg"
+              alt=""
+            />
+            <p class="text-lg text-start text-pretty">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque
+              adipisci molestias libero temporibus.
+            </p>
+          </footer>
+        </figure>
+
+        <div class="flex flex-col">
+          <header class="text-start mb-4 text-blue-900">
+            <span class="font-semibold">Institucional</span>
+          </header>
+          <footer class="flex gap-2">
+            <p class="text-lg text-start text-pretty">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque
+              harum totam voluptatum reprehenderit praesentium labore!
+            </p>
+          </footer>
+        </div>
+
+        <div class="flex flex-col">
+          <header class="text-start mb-4">
+            <span class="font-semibold text-blue-900">Contactanos</span>
+          </header>
+          <footer class="flex flex-col">
+            <div class="flex gap-3 mb-3">
+              <a href="/"><IconFacebook class="w-8" /></a>
+              <a href="/"><IconInstagram class="w-8" /></a>
+              <a href="/"> <IconMail class="w-8" /></a>
+              <IconPhone class="w-8"/> 
+            </div>
+            <div class="flex items-center leading-normal gap-1"> 
+              <span class="text-lg text-start">
+               <span class="text-blue-900 font-medium">Oficina Central:</span> Blvd. Olimpico Jose Benjamin Zubiaur 4385, Buenos Aires
+              </span>
+            </div>
+          </footer>
+        </div>
+
+      </div>
+    </div>
+  </footer>

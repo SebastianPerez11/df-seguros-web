@@ -8,6 +8,7 @@ export default {
 				'auto-hero': 'repeat(auto-fit, minmax(500px, 1fr))',
 				'auto-pagos': 'repeat(auto-fit, minmax(270px, 1fr))',
 				'auto-contact': 'repeat(auto-fit, minmax(270px, 1fr))',
+				'auto-footer': 'repeat(auto-fit, minmax(300px, 1fr))',
 			}
 		},
 	},
