@@ -71,7 +71,7 @@ import Footer from "../components/Footer.astro";
       >
         {
           seguros.map(({ id, title, icon, alt }) => {
-            return <Card id={id} title={title} icon={icon} alt={alt} />;
+            return <Card class="hover:scale-105 hover:shadow-blue-700/30 transition-transform" id={id} title={title} icon={icon} alt={alt} />;
           })
         }
       </footer>

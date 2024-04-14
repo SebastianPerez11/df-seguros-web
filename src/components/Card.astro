@@ -6,7 +6,7 @@ const { id, title, icon, alt } = Astro.props;
   style={`view-transition-name: card-${id};`}
   href=`/${id}/`
   title={title}
-  class="hover:scale-105 hover:shadow-blue-700/30 transition-transform h-[240px] max-sm:h-[220px] bg-white/60 text-2xl max-sm:text-[22px] max-h-full flex flex-col gap-3 justify-center items-center rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)]"
+  class=`${Astro.props.class} h-[240px] max-sm:h-[220px] bg-white/60 text-2xl max-sm:text-[22px] max-h-full flex flex-col gap-3 justify-center items-center rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)]`
 >
   <img src=`../${icon}` loading="lazy" alt={alt} />
   <span>{title}</span>

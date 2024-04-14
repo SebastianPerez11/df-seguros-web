@@ -4,6 +4,6 @@ const {id, title} = Astro.props
 <a
 href=`/links/${id}/`
 title={title}
-class="text-[17px] max-sm:text-[16px] inline-block mr-2 mb-12 py-[5px] px-5 tracking-wide rounded-full font-medium shadow-[0_8px_30px_rgb(0,0,0,0.12)] bg-white/60 text-blue-800 max-lg:mb-5 max-lg:px-4 hover:bg-blue-800 hover:text-white transition-colors"
+class=`${Astro.props.class} text-[17px] max-sm:text-[16px] inline-block mr-2 mb-12 py-[5px] px-5 tracking-wide rounded-full font-medium shadow-[0_8px_30px_rgb(0,0,0,0.12)] bg-white/60 text-blue-800 max-lg:mb-5 max-lg:px-4 hover:bg-blue-800 hover:text-white transition-colors`
 >{title}</a 
 >
