@@ -1,0 +1,28 @@
+---
+const { description, title } = Astro.props;
+import Benefits from "./Benefits.astro";
+
+import { seguros } from "../Js/seguros";
+const { seguro } = Astro.params;
+const info = seguros.find((p) => p.id === seguro);
+const beneficios = info.benefits;
+---
+
+<h1 class="font-medium text-blue-800">
+  {title}
+</h1>
+<p class="font-medium text-xl">
+  {description}
+</p>
+
+<ul class="text-lg flex flex-col">
+  {
+    seguros.map(({ title, benefits }) => {
+      if (title === info.title) {
+        return benefits.map((benefit) => {
+          return <Benefits content={benefit} />;
+        });
+      }
+    })
+  }
+</ul>

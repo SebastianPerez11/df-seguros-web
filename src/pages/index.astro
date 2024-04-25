@@ -44,7 +44,7 @@ import Footer from "../components/Footer.astro";
           </p>
           <a
             class="bg-blue-800 hover:bg-blue-900 transition-colors text-lg mr-1 font-medium tracking-wide rounded-md text-white px-10 py-[10px] max-lg:text-base max-lg:px-8 max-lg:py-2"
-            href="/">Contactanos</a
+            href="#contacto">Contactanos</a
           >
         </header>
         <footer class="place-self-center">
@@ -71,14 +71,22 @@ import Footer from "../components/Footer.astro";
       >
         {
           seguros.map(({ id, title, icon, alt }) => {
-            return <Card class="hover:scale-105 hover:shadow-blue-700/30 transition-transform" id={id} title={title} icon={icon} alt={alt} />;
+            return (
+              <Card
+                class="hover:scale-105 hover:shadow-blue-700/30 transition-transform"
+                id={id}
+                title={title}
+                icon={icon}
+                alt={alt}
+              />
+            );
           })
         }
       </footer>
     </Section>
 
     <Section>
-      <header class="w-full">
+      <header id="contacto" class="w-full">
         <TitleSection title="Servicio de Asistencia" />
       </header>
       <footer
@@ -93,15 +101,15 @@ import Footer from "../components/Footer.astro";
             >
               Contactate con nosostros las 24hs, los 365 dias de año.
             </h4>
-            <a class="flex mb-3 gap-1 items-center text-xl" href="/"
-              ><IconPhone class="w-8" />- 0-810-999-3200</a
+            <a target="_blank" class="flex mb-3 gap-1 items-center text-xl" href="/"
+              ><IconPhone class="w-8" />- 11 6702-4116 | 11 2277-6024 </a
             >
-            <a class="flex mb-3 gap-1 items-center text-xl" href="/"
+            <a target="_blank" class="flex mb-3 gap-1 items-center text-xl" href="/"
               ><IconWhatsapp class="w-8" />- +54 9 11 3765-0687</a
             >
-            <a class="flex gap-1 items-center text-xl" href="/"
+            <a target="_blank" class="flex gap-1 items-center text-xl" href="/"
               ><IconMail class="w-8" />
-              - info@segurosrivadavia.com</a
+              - dafaseguros@gmail.com</a
             >
           </div>
 
@@ -111,10 +119,10 @@ import Footer from "../components/Footer.astro";
             >
               Seguinos en nuestras redes sociales para mantenerte informado.
             </h4>
-            <a class="flex mb-3 gap-1 items-center text-xl" href="/"
+            <a target="_blank" class="flex mb-3 gap-1 items-center text-xl" href="https://www.facebook.com/danielfarajseguros/"
               ><IconFacebook class="w-8" />- Facebook</a
             >
-            <a class="flex gap-1 items-center text-xl" href="/"
+            <a target="_blank" class="flex gap-1 items-center text-xl" href="https://www.instagram.com/dafa_seguros/"
               ><IconInstagram class="w-8" />
               - Instagram
             </a>
@@ -127,11 +135,11 @@ import Footer from "../components/Footer.astro";
           <h4
             class="mb-4 text-2xl max-sm:text-[22px] text-start font-semibold text-blue-800"
           >
-            Ubicación: Blvd. Olimpico Jose Benjamin Zubiaur 4385, Buenos Aires
+            Oficina: FIC, Gral. Arredondo 3508, B1872 Sarandí, Provincia de Buenos Aires
           </h4>
           <iframe
             title="Ubicación de la Oficina"
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13124.673232220037!2d-58.4542305!3d-34.6757014!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb1bc837b8a7%3A0x327c7c69ca37fa13!2sEdificio%2020!5e0!3m2!1sen!2sar!4v1711128214642!5m2!1sen!2sar"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.5142886874596!2d-58.34963140000001!3d-34.6922062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a332de100148f7%3A0x29c71fcde2d42d6e!2sFIC%2C%20Gral.%20Arredondo%203508%2C%20B1872%20Sarand%C3%AD%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1sen!2sar!4v1714007397809!5m2!1sen!2sar"
             width="100%"
             height="300"
             style="border:0;"
@@ -169,16 +177,19 @@ import Footer from "../components/Footer.astro";
                 Abona con tu metodo pago de preferencia.
               </p>
               <ul class="text-2xl max-sm:text-[22px]">
-                <li class="flex gap-2 mb-2">
+                <li class="flex gap-2 mb-3">
+                  <IconCheck class="w-7" />Atención personalizada
+                </li>
+                <li class="flex gap-2 mb-3">
                   <IconCheck class="w-7" />Tarjetas (Credito | Debito)
                 </li>
-                <li class="flex gap-2 mb-2">
+                <li class="flex gap-2 mb-3">
                   <IconCheck class="w-7" />Transferencias Bancarias
                 </li>
-                <li class="flex gap-2 mb-2">
+                <li class="flex gap-2 mb-3">
                   <IconCheck class="w-7" />Mercado Pago
                 </li>
-                <li class="flex gap-2 mb-2">
+                <li class="flex gap-2 mb-3">
                   <IconCheck class="w-7" />Efectivo
                 </li>
               </ul>
