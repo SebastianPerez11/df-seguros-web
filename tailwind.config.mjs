@@ -9,6 +9,7 @@ export default {
 				'auto-pagos': 'repeat(auto-fit, minmax(320px, 1fr))',
 				'auto-contact': 'repeat(auto-fit, minmax(320px, 1fr))',
 				'auto-footer': 'repeat(auto-fit, minmax(320px, 1fr))',
+				'auto-contact-two': 'repeat(auto-fit, minmax(200px, 1fr))',
 			}
 		},
 	},

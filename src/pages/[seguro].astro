@@ -1,21 +1,18 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
-import HeroSvg from "../svg/HeroSvg.astro";
-import SavingsSvg from "../svg/SavingsSvg.astro";
 import IconWhatsapp from "../icons/IconWhatsapp.astro";
 import IconPhone from "../icons/IconPhone.astro";
 import IconMail from "../icons/IconMail.astro";
 import IconFacebook from "../icons/IconFacebook.astro";
 import IconInstagram from "../icons/IconInstagram.astro";
-import IconPig from "../icons/IconPig.astro";
-import IconCheck from "../icons/IconCheck.astro";
 import Section from "../components/Section.astro";
 import TitleSection from "../components/TitleSection.astro";
 import LinkSection from "../components/LinkSection.astro";
 import DescriptionCard from "../components/DescriptionCard.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import ContactSvg from "../svg/ContactSvg.astro";
 
 import { links } from "../Js/links";
 import { seguros } from "../Js/seguros";
@@ -43,20 +40,199 @@ const info = seguros.find((p) => p.id === seguro);
         {
           seguros.map(({ id, title, icon, alt }) => {
             if (title === info.title) {
-              return <Card id={id} title={title} icon={icon} alt={alt} />;
+              return (
+                <Card
+                  sizeIcon="w-20"
+                  class="h-[270px]"
+                  id={id}
+                  title={title}
+                  icon={icon}
+                  alt={alt}
+                />
+              );
             }
           })
         }
         <div class="flex flex-col text-start gap-3">
-            {
-              seguros.map(({ title, description }) => {
-                if (title === info.title) {
-                  return <DescriptionCard title={title} description={description}/>;
-                }
-              })
-            }
+          {
+            seguros.map(({ title, description }) => {
+              if (title === info.title) {
+                return (
+                  <DescriptionCard title={title} description={description} />
+                );
+              }
+            })
+          }
         </div>
       </footer>
+    </Section>
+
+    <Section>
+      <header class="w-full">
+        <TitleSection title="Servicio de Asistencia" />
+      </header>
+      <footer
+        class="w-full grid gap-10 justify-between grid-cols-auto-contact text-center text-2xl"
+      >
+        <div
+          class="flex gap-6 flex-col p-8 max-sm:px-4 h-full rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] bg-white/60"
+        >
+          <div>
+            <h4
+              class="mb-4 text-2xl max-sm:text-[22px] text-start font-semibold text-blue-800"
+            >
+              Contactate con nosostros las 24hs, los 365 dias de año.
+            </h4>
+            <a
+              target="_blank"
+              class="flex mb-3 gap-1 items-center text-xl"
+              href="/"
+              ><IconPhone class="w-8" />- 11 6702-4116 | 11 2277-6024
+            </a>
+            <a
+              target="_blank"
+              class="flex mb-3 gap-1 items-center text-xl"
+              href="/"><IconWhatsapp class="w-8" />- +54 9 11 3765-0687</a
+            >
+            <a target="_blank" class="flex gap-1 items-center text-xl" href="/"
+              ><IconMail class="w-8" />
+              - dafaseguros@gmail.com</a
+            >
+          </div>
+
+          <div>
+            <h4
+              class="mb-4 text-2xl max-sm:text-[22px] text-start font-semibold text-blue-800"
+            >
+              Seguinos en nuestras redes sociales para mantenerte informado.
+            </h4>
+            <a
+              target="_blank"
+              class="flex mb-3 gap-1 items-center text-xl"
+              href="https://www.facebook.com/danielfarajseguros/"
+              ><IconFacebook class="w-8" />- Facebook</a
+            >
+            <a
+              target="_blank"
+              class="flex gap-1 items-center text-xl"
+              href="https://www.instagram.com/dafa_seguros/"
+              ><IconInstagram class="w-8" />
+              - Instagram
+            </a>
+          </div>
+        </div>
+
+        <div
+          class="flex p-8 max-sm:px-4 h-full flex-col rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] bg-white/60"
+        >
+          <h4
+            class="mb-4 text-2xl max-sm:text-[22px] text-start font-semibold text-blue-800"
+          >
+            Oficina: FIC, Gral. Arredondo 3508, B1872 Sarandí, Provincia de
+            Buenos Aires
+          </h4>
+          <iframe
+            title="Ubicación de la Oficina"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.5142886874596!2d-58.34963140000001!3d-34.6922062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a332de100148f7%3A0x29c71fcde2d42d6e!2sFIC%2C%20Gral.%20Arredondo%203508%2C%20B1872%20Sarand%C3%AD%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1sen!2sar!4v1714007397809!5m2!1sen!2sar"
+            width="100%"
+            height="300"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </footer>
+    </Section>
+
+    <Section>
+      <header id="contacto" class="w-full">
+        <TitleSection title="Contactanos" />
+      </header>
+      <div class="w-full grid grid-cols-auto-fit gap-8">
+        <header class="w-full flex flex-col justify-center items-center">
+          <form action="https://formsubmit.co/sebasperez.dev@gmail.com"
+            class="w-full h-full grid p-8 rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] bg-white/60"
+          >
+            <h2 class="text-2xl mb-1">
+              Comunicate con nosotros y obtené una <span
+                class="font-medium text-blue-800"
+                >Asistencia Personalizada.</span
+              >
+            </h2>
+            <span class="text-base mb-2 opacity-75 font-medium">
+              (Rellene los campos por favor)
+            </span>
+            <div class="grid grid-cols-auto-contact-two gap-10">
+              <label
+                class="mb-2 text-blue-900 flex text-lg font-medium flex-col"
+                >Nombre: <input
+                  class="text-gray-600 border-b-2 border-blue-900 bg-transparent focus:outline-none pl-1 rounded-sm py-[2px]"
+                  type="text"
+                  name="Nombre"
+                  id=""
+                  placeholder="Juan"
+                /></label
+              >
+
+              <label
+                class="mb-2 text-blue-900 flex text-lg font-medium flex-col"
+                >Apellido: <input
+                  class="text-gray-600 border-b-2 border-blue-900 bg-transparent focus:outline-none pl-1 rounded-sm py-[2px]"
+                  type="text"
+                  name="Apellido"
+                  id=""
+                  placeholder="Perez"
+                /></label
+              >
+
+              <label
+                class="mb-2 text-blue-900 flex text-lg font-medium flex-col"
+                >Email: <input
+                  class="text-gray-600 border-b-2 border-blue-900 bg-transparent focus:outline-none pl-1 rounded-sm py-[2px]"
+                  type="email"
+                  name="Email"
+                  id=""
+                  placeholder="mail@gmail.com"
+                /></label
+              >
+
+              <label
+                class="mb-2 text-blue-900 flex text-lg font-medium flex-col"
+                >Dirección: <input
+                  class="text-gray-600 border-b-2 border-blue-900 bg-transparent focus:outline-none pl-1 after:rounded-sm py-[2px]"
+                  type="text"
+                  name="Dirección"
+                  id=""
+                  placeholder="Sarandí, Provincia de Buenos Aires"
+                /></label
+              >
+
+              <label
+                class="mb-2 col-span-full text-blue-900 flex text-lg font-medium flex-col"
+              >
+                Descripción:
+                <textarea
+                  class="text-gray-600 border-b-2 min-h-20 border-blue-900 bg-transparent focus:outline-none pl-1 mb-3 rounded-sm resize-none"
+                  name="Descripción"
+                  id=""
+                  placeholder="Quiero recibir más información..."></textarea>
+              </label>
+            </div>
+            <div class="mt-2">
+              <a
+                class="bg-blue-800 hover:bg-blue-900 transition-colors text-lg mr-1 font-medium tracking-wide rounded-md text-white px-10 py-[8px] max-lg:text-base max-lg:px-8 max-lg:py-2"
+                href="#contacto">Enviar Datos</a
+              >
+            </div>
+          </form>
+        </header>
+
+        <footer class="w-full flex justify-center items-center">
+          <ContactSvg
+            class="2xl:w-[560px] xl:w-[520px] lg:w-[480px] w-[500px] max-sm:w-[350px]"
+          />
+        </footer>
+      </div>
     </Section>
 
     <Footer />

@@ -5,37 +5,46 @@ export const seguros = [
         icon: "../../img/IconAuto.svg",
         alt: "Icono Auto",
         description: "Te ofrecemos protección financiera contra daños o pérdidas relacionadas con tu vehículo, al mejor precio.",
-        benefits: ["Cobertura ante robos y hurtos." , "Defensa legal y asesoramiento." , "Asistencia en ruta."],
+        benefits: ["Cobertura ante robos y hurtos.", "Defensa legal y asesoramiento.", "Asistencia en ruta."],
     },
     {
         id: "hogar",
         title: "Hogar",
         icon: "../../img/IconHogar.svg",
         alt: "Icono Hogar",
-        benefits: ["Cobertura ante robos y hurtossss." , "Defensa legal y asesoramiento." , "Asistencia en ruta."],
+        description: "Tu hogar es tu refugio, pero también es una inversión importante. Protege tu inversión con un seguro de hogar.",
+        benefits: ["Cobertura ante imprevistos.", "Protección de tu patrimonio", "Servicios de asistencia."],
     },
     {
         id: "combinadosFamiliar",
         title: "Combinados Familiar",
         icon: "../../img/IconAccidente.svg",
-        alt: "Icono Accidente"
+        alt: "Icono Accidente",
+        description: "Obtené amplia protección para tu hogar y familia. Conoce todos los ",
+        benefits: ["Protección a Robo y/o hurto", "Mayores Beneficios.", "Tranquilidad Familiar"],
     },
     {
         id: "vida",
         title: "Vida",
         icon: "../../img/IconVida.svg",
-        alt: "Icono Corazón"
+        alt: "Icono Corazón",
+        description: "Con nuestro seguro de vida, puedes garantizar que tus seres queridos siempre tendrán un soporte financiero sólido.",
+        benefits: ["Protección financiera para tu familia.", "Planificación de patrimonio y legado.", "Ayuda con los gastos de finalización."],
     },
     {
         id: "incendios",
         title: "Incendios",
         icon: "../../img/IconIncendio.svg",
-        alt: "Icono Incendio"
+        alt: "Icono Incendio",
+        description: "Es una decisión inteligente para proteger tus bienes y garantizar tranquilidad en situaciones imprevistas.",
+        benefits: ["Protección ante Daños.", "Seguridad Financiera.", "Cumplimiento Legal."],
     },
     {
         id: "trabajo",
         title: "Trabajo",
         icon: "../../img/IconTrabajo.svg",
-        alt: "Icono Trabajo"
+        alt: "Icono Trabajo",
+        description: "Fundamental para proteger a los trabajadores y trabajadoras en caso de accidentes laborales o pérdida involuntaria del empleo.",
+        benefits: ["Cobertura Médico-Asistencial.", "Reconocimiento de Antigüedad.", "Protección Financiera."],
     },
 ]

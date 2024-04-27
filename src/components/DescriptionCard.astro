@@ -8,14 +8,14 @@ const info = seguros.find((p) => p.id === seguro);
 const beneficios = info.benefits;
 ---
 
-<h1 class="font-medium text-blue-800">
-  {title}
+<h1 class="font-medium text-[28px] text-blue-800">
+  Seguro de {title}
 </h1>
 <p class="font-medium text-xl">
   {description}
 </p>
 
-<ul class="text-lg flex flex-col">
+<ul class="text-lg flex flex-col gap-1 mb-1">
   {
     seguros.map(({ title, benefits }) => {
       if (title === info.title) {
@@ -26,3 +26,14 @@ const beneficios = info.benefits;
     })
   }
 </ul>
+<div>
+  <a
+  class="bg-blue-800 hover:bg-blue-900 transition-colors text-lg mr-1 font-medium tracking-wide rounded-md text-white px-6 py-[7px] max-lg:text-base max-lg:px-8 max-lg:py-2"
+  href="#contacto">Contactanos</a
+  >
+  <a
+  class="bg-white/90 hover:bg-gray-50 transition-colors text-lg mr-1 font-medium tracking-wide rounded-md text-blue-800 px-6 py-[7px] max-lg:text-base max-lg:px-8 max-lg:py-2"
+  href="/">Volver</a
+  >
+</div>
+
