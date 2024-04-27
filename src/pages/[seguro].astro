@@ -171,6 +171,7 @@ const info = seguros.find((p) => p.id === seguro);
                   name="Nombre"
                   id=""
                   placeholder="Juan"
+                  required
                 /></label
               >
 
@@ -182,6 +183,7 @@ const info = seguros.find((p) => p.id === seguro);
                   name="Apellido"
                   id=""
                   placeholder="Perez"
+                  required
                 /></label
               >
 
@@ -193,6 +195,7 @@ const info = seguros.find((p) => p.id === seguro);
                   name="Email"
                   id=""
                   placeholder="mail@gmail.com"
+                  required
                 /></label
               >
 
@@ -215,14 +218,14 @@ const info = seguros.find((p) => p.id === seguro);
                   class="text-gray-600 border-b-2 min-h-20 border-blue-900 bg-transparent focus:outline-none pl-1 mb-3 rounded-sm resize-none"
                   name="Descripción"
                   id=""
-                  placeholder="Quiero recibir más información..."></textarea>
+                  placeholder="Quiero recibir más información..."
+                  required></textarea>
               </label>
             </div>
             <div class="mt-2">
-              <a
+              <input
                 class="bg-blue-800 hover:bg-blue-900 transition-colors text-lg mr-1 font-medium tracking-wide rounded-md text-white px-10 py-[8px] max-lg:text-base max-lg:px-8 max-lg:py-2"
-                href="#contacto">Enviar Datos</a
-              >
+                value="Enviar Datos">
             </div>
           </form>
         </header>
