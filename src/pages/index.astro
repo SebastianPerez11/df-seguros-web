@@ -14,7 +14,6 @@ import Section from "../components/Section.astro";
 import LinkSection from "../components/LinkSection.astro";
 import TitleSection from "../components/TitleSection.astro";
 import { seguros } from "../Js/seguros";
-import { links } from "../Js/links";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 ---
@@ -60,11 +59,8 @@ import Footer from "../components/Footer.astro";
     <Section>
       <header class="w-full">
         <TitleSection title="Conoce nuestro Seguros" />
-        {
-          links.map(({ id, title }) => {
-            return <LinkSection id={id} title={title} />;
-          })
-        }
+
+        <LinkSection title="Personas" />
       </header>
       <footer
         class="w-full grid gap-10 max-sm:gap-5 justify-between grid-cols-auto-fit text-center text-2xl"
@@ -86,7 +82,7 @@ import Footer from "../components/Footer.astro";
     </Section>
 
     <Section>
-      <header id="contacto" class="w-full">
+      <header class="w-full">
         <TitleSection title="Servicio de Asistencia" />
       </header>
       <footer
@@ -101,13 +97,24 @@ import Footer from "../components/Footer.astro";
             >
               Contactate con nosostros las 24hs, los 365 dias de año.
             </h4>
-            <a target="_blank" class="flex mb-3 gap-1 items-center text-xl" href="/"
-              ><IconPhone class="w-8" />- 11 6702-4116 | 11 2277-6024 </a
+            <span class="flex mb-3 gap-1 items-center text-xl"
+              ><IconPhone class="w-8" />- <a
+                class="text-blue-900"
+                href="tel:+5467024116">11 6702-4116</a
+              > | <a class="text-blue-900" href="tel:+5422776024"
+                >11 2277-6024</a
+              >
+            </span>
+            <a
+              target="_blank"
+              class="flex mb-3 gap-1 items-center text-xl"
+              href="https://wa.me/541167024116"
+              ><IconWhatsapp class="w-8" />- +54 9 11 6702-4116</a
             >
-            <a target="_blank" class="flex mb-3 gap-1 items-center text-xl" href="/"
-              ><IconWhatsapp class="w-8" />- +54 9 11 3765-0687</a
-            >
-            <a target="_blank" class="flex gap-1 items-center text-xl" href="/"
+            <a
+              target="_blank"
+              class="flex gap-1 items-center text-xl"
+              href="mailto:dafaseguros@gmail.com"
               ><IconMail class="w-8" />
               - dafaseguros@gmail.com</a
             >
@@ -119,10 +126,16 @@ import Footer from "../components/Footer.astro";
             >
               Seguinos en nuestras redes sociales para mantenerte informado.
             </h4>
-            <a target="_blank" class="flex mb-3 gap-1 items-center text-xl" href="https://www.facebook.com/danielfarajseguros/"
+            <a
+              target="_blank"
+              class="flex mb-3 gap-1 items-center text-xl"
+              href="https://www.facebook.com/danielfarajseguros/"
               ><IconFacebook class="w-8" />- Facebook</a
             >
-            <a target="_blank" class="flex gap-1 items-center text-xl" href="https://www.instagram.com/dafa_seguros/"
+            <a
+              target="_blank"
+              class="flex gap-1 items-center text-xl"
+              href="https://www.instagram.com/dafa_seguros/"
               ><IconInstagram class="w-8" />
               - Instagram
             </a>
@@ -135,7 +148,8 @@ import Footer from "../components/Footer.astro";
           <h4
             class="mb-4 text-2xl max-sm:text-[22px] text-start font-semibold text-blue-800"
           >
-            Oficina: FIC, Gral. Arredondo 3508, B1872 Sarandí, Provincia de Buenos Aires
+            Oficina: FIC, Gral. Arredondo 3508, B1872 Sarandí, Provincia de
+            Buenos Aires
           </h4>
           <iframe
             title="Ubicación de la Oficina"
@@ -202,10 +216,9 @@ import Footer from "../components/Footer.astro";
     <Footer />
 
     <a
-      href="https://wa.me/541140297164"
+      href="https://wa.me/541167024116"
       target="_blank"
       class="w-12 h-12 fixed right-6 bottom-10"
-      title="Ir a WhatsApp"
     >
       <IconWhatsapp class="w-12 h-12 transition-transform hover:scale-105" />
     </a>

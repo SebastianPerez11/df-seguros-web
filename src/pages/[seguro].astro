@@ -13,8 +13,6 @@ import DescriptionCard from "../components/DescriptionCard.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import ContactSvg from "../svg/ContactSvg.astro";
-
-import { links } from "../Js/links";
 import { seguros } from "../Js/seguros";
 const { seguro } = Astro.params;
 
@@ -28,11 +26,7 @@ const info = seguros.find((p) => p.id === seguro);
     <Section>
       <header class="w-full">
         <TitleSection title="Conoce nuestro Seguros" />
-        {
-          links.map(({ id, title }) => {
-            return <LinkSection id={id} title={title} />;
-          })
-        }
+        <LinkSection title="Personas" />
       </header>
       <footer
         class="w-full grid gap-10 max-sm:gap-5 justify-between grid-cols-auto-fit text-center text-2xl"
@@ -83,18 +77,24 @@ const info = seguros.find((p) => p.id === seguro);
             >
               Contactate con nosostros las 24hs, los 365 dias de año.
             </h4>
+            <span class="flex mb-3 gap-1 items-center text-xl"
+              ><IconPhone class="w-8" />- <a
+                class="text-blue-900"
+                href="tel:+5467024116">11 6702-4116</a
+              > | <a class="text-blue-900" href="tel:+5422776024"
+                >11 2277-6024</a
+              >
+            </span>
             <a
               target="_blank"
               class="flex mb-3 gap-1 items-center text-xl"
-              href="/"
-              ><IconPhone class="w-8" />- 11 6702-4116 | 11 2277-6024
-            </a>
-            <a
-              target="_blank"
-              class="flex mb-3 gap-1 items-center text-xl"
-              href="/"><IconWhatsapp class="w-8" />- +54 9 11 3765-0687</a
+              href="https://wa.me/541167024116"
+              ><IconWhatsapp class="w-8" />- +54 9 11 6702-4116</a
             >
-            <a target="_blank" class="flex gap-1 items-center text-xl" href="/"
+            <a
+              target="_blank"
+              class="flex gap-1 items-center text-xl"
+              href="mailto:dafaseguros@gmail.com"
               ><IconMail class="w-8" />
               - dafaseguros@gmail.com</a
             >
@@ -150,7 +150,9 @@ const info = seguros.find((p) => p.id === seguro);
       </header>
       <div class="w-full grid grid-cols-auto-fit gap-8">
         <header class="w-full flex flex-col justify-center items-center">
-          <form action="https://formsubmit.co/sebasperez.dev@gmail.com" method="post"
+          <form
+            action="https://formsubmit.co/sebasperez.dev@gmail.com"
+            method="post"
             class="w-full h-full grid p-8 rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] bg-white/60"
           >
             <h2 class="text-2xl mb-1">
@@ -226,7 +228,14 @@ const info = seguros.find((p) => p.id === seguro);
               <input
                 type="submit"
                 class="bg-blue-800 hover:bg-blue-900 transition-colors text-lg mr-1 font-medium tracking-wide rounded-md text-white px-10 py-[8px] max-lg:text-base max-lg:px-8 max-lg:py-2"
-                value="Enviar Datos">
+                value="Enviar Datos"
+              />
+              <input
+                type="hidden"
+                name="_next"
+                value="https://dafasesoresdeseguros.com.ar/"
+              />
+              <input type="hidden" name="_captcha" value="false" />
             </div>
           </form>
         </header>
@@ -242,11 +251,11 @@ const info = seguros.find((p) => p.id === seguro);
     <Footer />
 
     <a
-      href="https://wa.me/541140297164"
+      href="https://wa.me/541167024116"
       target="_blank"
       class="w-12 h-12 fixed right-6 bottom-10"
     >
-      <IconWhatsapp class="w-12 h-12" />
+      <IconWhatsapp class="w-12 h-12 transition-transform hover:scale-105" />
     </a>
   </main>
 </Layout>
