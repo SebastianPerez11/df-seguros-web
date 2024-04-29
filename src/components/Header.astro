@@ -48,7 +48,9 @@ import LinkHeader from "./LinkHeader.astro";
     >
       <a class="links" href="/">Inicio</a>
 
-      <a class="links" href="#insurance">Nuestros Seguros</a>
+      <slot name="changeMenu">
+        <a class="links" href="#insurance">Nuestros Seguros</a>
+      </slot>
 
       <a class="links" href="#service">Servicio de Asistencia</a>
 
