@@ -23,12 +23,11 @@ const { seguro } = Astro.params;
 const info = seguros.find((p) => p.id === seguro);
 ---
 
-<Layout title=`${info.title}`>
+<Layout title=`DAFA - ${info.title}`>
   <Header>
     <slot slot="change">
-      <LinkHeader href="#contact" link="Contactanos"/>
+      <LinkHeader href="#contact" link="Contactanos" />
     </slot>
-
   </Header>
 
   <main>
@@ -45,18 +44,19 @@ const info = seguros.find((p) => p.id === seguro);
             if (title === info.title) {
               return (
                 <Card
-                  sizeIcon="w-20"
+                  sizeIcon="w-20 max-lg:w-14"
                   class="h-[270px]"
                   id={id}
                   title={title}
                   icon={icon}
                   alt={alt}
+                  loading="eager"
                 />
               );
             }
           })
         }
-        <div class="flex flex-col text-start gap-3">
+        <div class="flex flex-col text-start gap-3 max-sm:gap-4">
           {
             seguros.map(({ title, description }) => {
               if (title === info.title) {
@@ -103,7 +103,7 @@ const info = seguros.find((p) => p.id === seguro);
             <a
               target="_blank"
               class="flex gap-1 items-center text-xl"
-              href="mailto:dafaseguros@gmail.com"
+              href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=DmwnWstwMztBWdHknFfZtLbZNtsxQrfckhHzSLkgWvtkfJGvZTSPtCqMHnpmVTFFpWHSFLXZRwfG"
               ><IconMail class="w-8" />
               - dafaseguros@gmail.com</a
             >
@@ -147,7 +147,7 @@ const info = seguros.find((p) => p.id === seguro);
             height="300"
             style="border:0;"
             allowfullscreen=""
-            loading="lazy"
+            loading="eager"
             referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </footer>
@@ -162,7 +162,7 @@ const info = seguros.find((p) => p.id === seguro);
           <form
             action="https://formsubmit.co/sebasperez.dev@gmail.com"
             method="post"
-            class="w-full h-full grid p-8 rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] bg-white/60"
+            class="w-full h-full grid p-8 max-sm:px-4 rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] bg-white/60"
           >
             <h2 class="text-2xl mb-1">
               Comunicate con nosotros y obtené una <span

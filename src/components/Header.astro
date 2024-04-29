@@ -4,58 +4,71 @@ import IconFacebook from "../icons/IconFacebook.astro";
 import IconInstagram from "../icons/IconInstagram.astro";
 import LinkHeader from "./LinkHeader.astro";
 ---
-<header id="home" class="flex justify-center w-full h-full py-6 px-24 max-sm:px-4">
+
+<header
+  id="home"
+  class="flex justify-center w-full h-full py-6 px-24 max-sm:px-4"
+>
+  <div
+    class="w-full max-w-[1440px] flex justify-between items-center max-xl:hidden"
+  >
+    <figure>
+      <a href="/">
+        <h1 class="text-[26px] xl:text-[22px] font-semibold text-blue-800">
+          DAFA - Asesores de Seguros
+        </h1>
+      </a>
+    </figure>
+    <nav class="text-lg xl:text-[17px]">
+      <ul class="flex text-black/80 font-medium gap-4 xl:gap-2">
+        <LinkHeader href="/" link="Inicio" />
+        <slot name="change">
+          <LinkHeader href="#insurance" link="Nuestros Seguros" />
+        </slot>
+        <LinkHeader href="#service" link="Servicio de Asistencia" />
+        <LinkHeader href="#payment" link="Metodos de Pago" />
+        <slot />
+      </ul>
+    </nav>
+  </div>
+
+  <div
+    class="w-full max-w-[1440px] flex justify-between items-center xl:hidden"
+  >
+  <a class="z-40" href="/">
+    <span class="text-blue-800 text-xl z-50 font-semibold">DAFA - Seguros</span>
+  
+  </a>
+    <figure class="w-10 z-40">
+      <IconMenu id="menu" class="w-10" />
+    </figure>
     <div
-      class="w-full max-w-[1440px] flex justify-between items-center max-xl:hidden"
+      id="menuNesting"
+      class="bg-blue-50 gap-10 text-lg flex flex-col pt-24 pl-8 top-0 right-0 translate-x-[100%] transition-transform fixed z-20 w-full h-screen text-black/80 font-medium"
     >
-      <figure>
-        <a href="/">
-          <h1 class="text-[26px] xl:text-[22px] font-semibold text-blue-800">
-            DAFA - Asesores de Seguros
-          </h1>
-        </a>
-      </figure>
-      <nav class="text-lg xl:text-[17px]">
-        <ul class="flex text-black/80 font-medium gap-4 xl:gap-2">
-          <LinkHeader href="/" link="Inicio"/>
-          <slot name="change">
-            <LinkHeader href="#insurance" link="Nuestros Seguros"/>
-          </slot>
-          <LinkHeader href="#service" link="Servicio de Asistencia"/>
-          <LinkHeader href="#payment" link="Metodos de Pago"/>
-          <slot/>
-        </ul>
-      </nav>
-    </div>
+      <a class="links" href="/">Inicio</a>
 
-    <div
-      class="w-full max-w-[1440px] flex justify-between items-center xl:hidden"
-    >
-      <h1 class="text-blue-800 text-xl z-50 font-semibold">Dafa-Icon</h1>
-      <figure class="w-10 z-40">
-        <IconMenu id="menu" class="w-10" />
-      </figure>
-      <div
-        id="menuNesting"
-        class="bg-blue-50 gap-10 text-lg flex flex-col pt-24 pl-8 top-0 right-0 translate-x-[100%] transition-transform fixed z-20 w-full h-screen text-black/80 font-medium"
-      >
-        <a href="/normal/">Personas</a>
+      <a class="links" href="#insurance">Nuestros Seguros</a>
 
-        <a href="/">Empresas y Profesionales</a>
+      <a class="links" href="#service">Servicio de Asistencia</a>
 
-        <a href="/">Transporte de Pasajeros</a>
+      <a class="links" href="#payment">Metodos de Pago</a>
 
-        <a href="/">Institucional</a>
-        <div class="flex gap-4 items-center justify-start">
-          <a class="flex gap-1 items-center text-lg" href="/"
-          ><IconFacebook class="w-7" />Facebook</a
+      <div class="flex gap-4 items-center justify-start">
+        <a
+          class="flex gap-1 items-center text-lg"
+          href="https://www.facebook.com/danielfarajseguros/"
+          target="_blank"><IconFacebook class="w-7" />Facebook</a
         >
-        <a class="flex gap-1 items-center text-lg" href="/"
+        <span>|</span>
+        <a
+          class="flex gap-1 items-center text-lg"
+          href="https://www.instagram.com/dafa_seguros/"
+          target="_blank"
           ><IconInstagram class="w-7" />
           Instagram
         </a>
-        </div>
-      
       </div>
     </div>
-  </header>
+  </div>
+</header>

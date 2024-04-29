@@ -1,5 +1,5 @@
 ---
-const { id, title, icon, alt } = Astro.props;
+const { id, title, icon, alt, loading } = Astro.props;
 ---
 
 <a
@@ -8,6 +8,6 @@ const { id, title, icon, alt } = Astro.props;
   title={title}
   class=`h-[240px] max-sm:h-[220px] bg-white/60 text-2xl max-sm:text-[22px] max-h-full flex flex-col gap-3 justify-center items-center rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] ${Astro.props.class}`
 >
-  <img class=`w-14 ${Astro.props.sizeIcon}` src=`../${icon}` loading="lazy" alt={alt} />
+  <img class=`w-14 ${Astro.props.sizeIcon}` src=`../${icon}` loading{loading} alt={alt} />
   <span>{title}</span>
 </a>

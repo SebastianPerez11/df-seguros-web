@@ -3,6 +3,9 @@ import IconPhone from "../icons/IconPhone.astro";
 import IconMail from "../icons/IconMail.astro";
 import IconFacebook from "../icons/IconFacebook.astro";
 import IconInstagram from "../icons/IconInstagram.astro";
+import DafaSSN from "../../public/img/DafaSSN.png";
+import LogoDafa from "../../public/img/DafaLogo.png";
+import { Image } from "astro:assets";
 ---
 
 <footer
@@ -19,11 +22,10 @@ import IconInstagram from "../icons/IconInstagram.astro";
           </h1>
         </a>
         <footer class="flex">
-          <img
-            loading="lazy"
-            class="w-28 object-contain aspect-video mr-3"
-            src="../../img/logo.png"
-            alt=""
+          <Image
+            src={LogoDafa}
+            alt="Logo DAFA Seguros"
+            class="w-28 max-lg:w-20 object-contain aspect-video mr-3"
           />
           <p class="text-lg text-start text-pretty">
             Somos Productores Asesores de Seguros con mas de 25 años de
@@ -41,11 +43,10 @@ import IconInstagram from "../icons/IconInstagram.astro";
             Trabajamos con las mejores compañias aseguradoras del mercado.
             Productores Asesores de Compañías Líderes.
           </p>
-          <img
-            loading="lazy"
+          <Image
+            src={DafaSSN}
+            alt="Dafa SSN"
             class="w-64 h-12 object-cover aspect-video mr-3"
-            src="../../img/info.png"
-            alt=""
           />
         </footer>
       </div>
@@ -55,7 +56,7 @@ import IconInstagram from "../icons/IconInstagram.astro";
           <span class="font-semibold text-blue-900">Contactanos</span>
         </header>
         <footer class="flex flex-col">
-          <div class="flex items-center gap-3 mb-3">
+          <div class="flex flex-wrap items-center gap-3 mb-3">
             <a
               target="_blank"
               href="https://www.facebook.com/danielfarajseguros/"
@@ -67,14 +68,16 @@ import IconInstagram from "../icons/IconInstagram.astro";
             <a target="_blank" href="mailto:dafaseguros@gmail.com">
               <IconMail class="w-8" /></a
             >
-            <IconPhone class="w-8" /><a
-              class="text-blue-900 text-xl"
-              href="tel:+5467024116">11 6702-4116</a
-            >
-            <span class="text-lg">|</span><a
-              class="text-blue-900 text-xl"
-              href="tel:+5422776024">11 2277-6024</a
-            >
+            <IconPhone class="w-8" />
+            <div>
+              <a class="text-blue-900 text-xl" href="tel:+5467024116"
+                >11 6702-4116</a
+              >
+              <span class="text-lg">|</span><a
+                class="text-blue-900 text-xl"
+                href="tel:+5422776024">11 2277-6024</a
+              >
+            </div>
           </div>
           <div class="flex items-center leading-normal gap-1">
             <span class="text-lg text-start">

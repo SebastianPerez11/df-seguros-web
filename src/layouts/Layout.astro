@@ -11,24 +11,57 @@ import { ViewTransitions } from "astro:transitions";
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta
+      name="description"
+      content="Somos Productores Asesores de Seguros con mas de 25 años de experiencia en el rubro. Trabajamos con las mejores compañias aseguradoras del mercado."
+    />
+    <meta name="application-name" content="DAFA Seguros, Pagina Web" />
+    <meta name="author" content="German Andres Ferreyra | Sebastián Perez" />
+    <meta name="creator" content="German Andres Ferreyra | Sebastián Perez" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
+    <meta name="category" content="Productores Asesores de Seguros" />
+    <meta
+      name="keywords"
+      content="Asesoria de Seguros, Seguros de Vida, Seguros de Trabajo, DAFA Seguros, Mejores Compañias, Seguro de Automóviles, Seguro de Incendios, Combinados Familiar, Buenos Aires, Argentina"
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta property="og:title" content="DAFA Seguros" />
+    <meta
+      property="og:description"
+      content="DAFA Seguros - Productores Asesores de Seguros"
+    />
+    <meta property="og:url" content="https://dafasesoresdeseguros.com.ar/" />
+    <meta
+      property="og:site_name"
+      content="DAFA Seguros - Asesores de Seguros"
+    />
+    <meta property="og:image" content="../../img/DafaWeb.jpg" />
     <ViewTransitions />
     <title>{title}</title>
   </head>
-  <body class="bg-blue-50">
+  <body id="body" class="bg-blue-50">
     <slot />
     <script is:inline>
       function init() {
         const menuMobile = document.querySelector("#menu");
         const menuNesting = document.querySelector("#menuNesting");
+        const body = document.querySelector("#body");
+        const links = document.querySelectorAll(".links");
 
         // Rest of script...
         menuMobile.addEventListener("click", () => {
           menuNesting.classList.toggle("translate-x-[100%]");
+          body.classList.toggle("overflow-hidden")
         });
+
+        links.forEach((link => {
+          link.addEventListener("click", () => {
+            body.classList.toggle("overflow-hidden")
+            menuNesting.classList.add("translate-x-[100%]");
+          })
+        } )
+        );
 
         // Clean up by destroying instances and removing event listeners
         document.addEventListener(
