@@ -4,7 +4,7 @@ import IconFacebook from "../icons/IconFacebook.astro";
 import IconInstagram from "../icons/IconInstagram.astro";
 import LinkHeader from "./LinkHeader.astro";
 ---
-<header class="flex justify-center w-full h-full py-6 px-24 max-sm:px-4">
+<header id="home" class="flex justify-center w-full h-full py-6 px-24 max-sm:px-4">
     <div
       class="w-full max-w-[1440px] flex justify-between items-center max-xl:hidden"
     >
@@ -17,10 +17,13 @@ import LinkHeader from "./LinkHeader.astro";
       </figure>
       <nav class="text-lg xl:text-[17px]">
         <ul class="flex text-black/80 font-medium gap-4 xl:gap-2">
-          <LinkHeader href="/" link="Personas"/>
-          <LinkHeader href="/" link="Empresas y Profesionales"/>
-          <LinkHeader href="/" link="Transporte de Pasajeros"/>
-          <LinkHeader href="/" link="Institucional"/>
+          <LinkHeader href="/" link="Inicio"/>
+          <slot name="change">
+            <LinkHeader href="#insurance" link="Nuestros Seguros"/>
+          </slot>
+          <LinkHeader href="#service" link="Servicio de Asistencia"/>
+          <LinkHeader href="#payment" link="Metodos de Pago"/>
+          <slot/>
         </ul>
       </nav>
     </div>

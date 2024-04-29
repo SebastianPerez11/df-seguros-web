@@ -13,6 +13,10 @@ import DescriptionCard from "../components/DescriptionCard.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import ContactSvg from "../svg/ContactSvg.astro";
+import LinkHeader from "../components/LinkHeader.astro";
+import SavingsSvg from "../svg/SavingsSvg.astro";
+import IconCheck from "../icons/IconCheck.astro";
+import IconPig from "../icons/IconPig.astro";
 import { seguros } from "../Js/seguros";
 const { seguro } = Astro.params;
 
@@ -20,7 +24,12 @@ const info = seguros.find((p) => p.id === seguro);
 ---
 
 <Layout title=`${info.title}`>
-  <Header />
+  <Header>
+    <slot slot="change">
+      <LinkHeader href="#contact" link="Contactanos"/>
+    </slot>
+
+  </Header>
 
   <main>
     <Section>
@@ -61,7 +70,7 @@ const info = seguros.find((p) => p.id === seguro);
       </footer>
     </Section>
 
-    <Section>
+    <Section id="service">
       <header class="w-full">
         <TitleSection title="Servicio de Asistencia" />
       </header>
@@ -145,7 +154,7 @@ const info = seguros.find((p) => p.id === seguro);
     </Section>
 
     <Section>
-      <header id="contacto" class="w-full">
+      <header id="contact" class="w-full">
         <TitleSection title="Contactanos" />
       </header>
       <div class="w-full grid grid-cols-auto-fit gap-8">
@@ -246,6 +255,55 @@ const info = seguros.find((p) => p.id === seguro);
           />
         </footer>
       </div>
+    </Section>
+
+    <Section id="payment">
+      <header class="w-full">
+        <TitleSection title="Metodos de Pago" />
+      </header>
+      <footer
+        class="w-full grid gap-10 py-12 justify-between grid-cols-auto-pagos text-center text-2xl"
+      >
+        <picture class="flex w-full justify-center">
+          <SavingsSvg class="w-96 max-sm:w-[280px]" />
+        </picture>
+        <div
+          class="flex h-full flex-col p-8 max-sm:px-4 rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] bg-white/60"
+        >
+          <header class="flex gap-2 justify-center items-center">
+            <IconPig class="w-12 h-12 max-sm:w-10 max-sm:h-10" />
+            <span
+              class="text-3xl max-sm:w-[12ch] max-sm:text-[26px] leading-normal text-blue-700 font-semibold text-pretty mb-2"
+              >Ahorrá hasta un 30%</span
+            >
+          </header>
+          <footer class="max-sm:text-[22px]">
+            <p class="mb-4">con tu nueva póliza y sumá más beneficios.</p>
+            <div class="w-full text-start">
+              <p class="mb-4 font-medium">
+                Abona con tu metodo pago de preferencia.
+              </p>
+              <ul class="text-2xl max-sm:text-[22px]">
+                <li class="flex gap-2 mb-3">
+                  <IconCheck class="w-7" />Atención personalizada
+                </li>
+                <li class="flex gap-2 mb-3">
+                  <IconCheck class="w-7" />Tarjetas (Credito | Debito)
+                </li>
+                <li class="flex gap-2 mb-3">
+                  <IconCheck class="w-7" />Transferencias Bancarias
+                </li>
+                <li class="flex gap-2 mb-3">
+                  <IconCheck class="w-7" />Mercado Pago
+                </li>
+                <li class="flex gap-2 mb-3">
+                  <IconCheck class="w-7" />Efectivo
+                </li>
+              </ul>
+            </div>
+          </footer>
+        </div>
+      </footer>
     </Section>
 
     <Footer />
