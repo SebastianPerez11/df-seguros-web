@@ -1,6 +1,6 @@
-# Página Web - DAFA SEGUROS
+# Página Web - Dafa Seguros
 
-### DAFA SEGUROS son Productores Asesores de Seguros con mas de 25 años de experiencia en el rubro.
+### Dafa Seguros son Productores Asesores de Seguros con mas de 25 años de experiencia en el rubro.
 
 ![DafaLogo](https://github.com/SebastianPerez11/df-seguros-web/assets/139885977/96487b42-1040-482c-a0cd-0d90c4a4608c)
 
